@@ -31,7 +31,7 @@ The `/foss/designs` directory inside the Docker container is mounted from the `d
 ### 5. Setup PDK Environment
 Run the following command *inside the terminal within the VNC session* to set up the correct environment variables and paths for the `gf180mcuD` PDK:
 ```bash
-./setup_pdk.sh
+source setup_pdk.sh
 ```
 
 You are now ready to start designing!
