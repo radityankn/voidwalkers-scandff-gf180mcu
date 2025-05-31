@@ -1,6 +1,7 @@
 # IIC-OSIC-TOOLS Design Project Template (GlobalFoundries 180nm)
 
-This project is a template for the IIC-OSIC-TOOLS workflow, tailored for the GlobalFoundries 180nm (gf180mcuD) PDK.
+This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) workflow, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
+
 
 ## Getting Started
 
