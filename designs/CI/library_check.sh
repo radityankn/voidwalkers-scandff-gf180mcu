@@ -25,12 +25,16 @@ for libdir in "$LIBS_DIR"/*; do
     done
 done
 
-# Check files in ../libs/library/cell/ match "cellname*"
+# Check files in ../libs/library/cell/ match "cellname*" (skip check for testbench directories starting with "tb")
 for libdir in "$LIBS_DIR"/*; do
     [ -d "$libdir" ] || continue
     for celldir in "$libdir"/*; do
         [ -d "$celldir" ] || continue
         cellname=$(basename "$celldir")
+        # Skip filename prefix check for testbench directories starting with "tb"
+        if [[ "$cellname" == tb* ]]; then
+            continue
+        fi
         for entry in "$celldir"/*; do
             if [ -f "$entry" ]; then
                 filename=$(basename "$entry")
