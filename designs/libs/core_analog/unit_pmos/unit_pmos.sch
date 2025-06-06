@@ -18,7 +18,7 @@ C {devices/iopin.sym} -40 0 0 1 {name=p3 lab=gate}
 C {devices/code_shown.sym} -110 -130 0 0 {name=Parameters only_toplevel=false value=".param M=1"}
 C {symbols/pfet_03v3.sym} 20 0 0 0 {name=M3
 L=0.5u
-W=8u
+W=5u
 nf=2
 m=\{M\}
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

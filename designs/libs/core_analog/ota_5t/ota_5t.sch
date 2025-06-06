@@ -48,10 +48,10 @@ N 530 -430 610 -430 {lab=out}
 N 480 -220 480 -170 {lab=vss}
 N 470 -170 480 -170 {lab=vss}
 C {libs/core_analog/unit_nmos/unit_nmos.sym} 430 -230 0 0 {name=XMN_TAIL M=2}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 490 -480 0 0 {name=XMP_N M=1}
+C {libs/core_analog/unit_pmos/unit_pmos.sym} 490 -480 0 0 {name=XMP_N M=3}
 C {libs/core_analog/unit_nmos/unit_nmos.sym} 330 -230 0 1 {name=XMN_DIO M=1}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 450 -480 0 1 {name=XMP_P M=1}
-C {libs/core_analog/unit_nmos/unit_nmos.sym} 370 -370 0 0 {name=XMN_P M=2}
+C {libs/core_analog/unit_pmos/unit_pmos.sym} 450 -480 0 1 {name=XMP_P M=3}
+C {libs/core_analog/unit_nmos/unit_nmos.sym} 370 -370 0 0 {name=XMN_P M=1}
 C {libs/core_analog/unit_nmos/unit_nmos.sym} 570 -370 0 1 {name=XMN_N M=1}
 C {devices/ipin.sym} 340 -370 0 0 {name=p1 lab=in_p}
 C {devices/ipin.sym} 600 -370 0 1 {name=p2 lab=in_n}

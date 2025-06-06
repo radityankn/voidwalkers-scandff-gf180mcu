@@ -29,7 +29,7 @@ C {devices/lab_wire.sym} -420 130 0 0 {name=p2 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} -420 10 0 0 {name=p3 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} -40 190 0 0 {name=p4 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} -40 210 0 0 {name=p5 sig_type=std_logic lab=vssa}
-C {devices/isource.sym} -160 170 3 0 {name=I0 value=100u}
+C {devices/isource.sym} -160 170 3 0 {name=I0 value=50u}
 C {devices/lab_wire.sym} -210 170 0 0 {name=p6 sig_type=std_logic lab=vdda}
 C {devices/vsource.sym} -340 70 0 0 {name=V3 value=1.5 savecurrent=false}
 C {devices/lab_wire.sym} -340 130 0 0 {name=p7 sig_type=std_logic lab=vssa}
@@ -40,7 +40,8 @@ C {devices/code_shown.sym} 150 -300 0 0 {name=Simulation only_toplevel=false val
 save all
 
 OP
-show all > op.log
+*show all > op.log
+show all
 
 DC V3 0 3.3 0.01
 write tb_ota_5t.raw
