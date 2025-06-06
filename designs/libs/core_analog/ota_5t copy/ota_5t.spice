@@ -1,0 +1,16 @@
+** sch_path: /foss/designs/libs/core_analog/ota_5t copy/ota_5t.sch
+**.subckt ota_5t vdd out in_p in_n i_bias vss
+*.ipin in_p
+*.ipin in_n
+*.ipin i_bias
+*.ipin vdd
+*.ipin vss
+*.opin out
+*  XMN_TAIL -  unit_nmos  IS MISSING !!!!
+*  XMP_N -  unit_pmos  IS MISSING !!!!
+*  XMN_DIO -  unit_nmos  IS MISSING !!!!
+*  XMP_P -  unit_pmos  IS MISSING !!!!
+*  XMN_P -  unit_nmos  IS MISSING !!!!
+*  XMN_N -  unit_nmos  IS MISSING !!!!
+**.ends
+.end

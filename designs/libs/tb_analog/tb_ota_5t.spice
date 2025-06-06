@@ -1,0 +1,29 @@
+** sch_path: /foss/designs/libs/tb_analog/tb_ota_5t.sch
+**.subckt tb_ota_5t
+V1 vssa GND 0
+V2 vdda vssa 3.3
+I0 vdda net1 100u
+V3 vin vssa 1.5
+*  x1 -  ota_5t  IS MISSING !!!!
+**** begin user architecture code
+
+
+.control
+save all
+
+OP
+show all
+
+DC V3 0 3.3 0.01
+write tb_ota_5t.raw
+.endc
+
+
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
