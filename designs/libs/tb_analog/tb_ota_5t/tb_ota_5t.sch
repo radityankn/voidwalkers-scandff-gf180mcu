@@ -35,7 +35,7 @@ C {devices/vsource.sym} -340 70 0 0 {name=V3 value=1.5 savecurrent=false}
 C {devices/lab_wire.sym} -340 130 0 0 {name=p7 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} -340 10 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/lab_wire.sym} -120 110 0 0 {name=p9 sig_type=std_logic lab=vin}
-C {devices/code_shown.sym} -430 -180 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} 70 -300 0 0 {name=Simulation only_toplevel=false value="
 .control
 save all
 
