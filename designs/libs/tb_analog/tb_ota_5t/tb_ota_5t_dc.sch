@@ -35,21 +35,21 @@ C {devices/vsource.sym} -340 70 0 0 {name=V3 value=1.5 savecurrent=false}
 C {devices/lab_wire.sym} -340 130 0 0 {name=p7 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} -340 10 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/lab_wire.sym} -120 110 0 0 {name=p9 sig_type=std_logic lab=vin}
-C {devices/code_shown.sym} 70 -300 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} 150 -300 0 0 {name=Simulation only_toplevel=false value="
 .control
 save all
 
 OP
-show all
+show all > op.log
 
 DC V3 0 3.3 0.01
 write tb_ota_5t.raw
 .endc
 "}
-C {devices/code_shown.sym} -430 -300 0 0 {name=MODELS1 only_toplevel=true
+C {devices/code_shown.sym} -430 -300 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {libs/core_analog/ota_5t copy/ota_5t.sym} 0 0 0 0 {name=x1}
+C {libs/core_analog/ota_5t/ota_5t.sym} 0 0 0 0 {name=x1}
