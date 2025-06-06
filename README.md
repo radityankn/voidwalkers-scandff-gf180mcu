@@ -33,8 +33,69 @@ Run the following command *inside the terminal within the VNC session* to set up
 ```bash
 source setup_pdk.sh
 ```
+Launch Xschem
+```bash
+xschem
+```
+You should see the available devices from the PDK and their testbenches.
 
-You are now ready to start designing!
+
+## Library Structure Conventions
+
+The project follows specific naming conventions for organizing design libraries under `/designs/libs/`:
+
+### Directory Structure
+```
+/designs/libs/
+├── core_*/          # Design libraries (core functionality)
+├── tb_*/            # Testbench libraries
+└── ...
+```
+
+### Naming Conventions
+- **`core_*`**: Design libraries containing your core circuit implementations
+- **`tb_*`**: Testbench libraries containing simulation and verification setups
+
+### File Organization
+Within each library directory:
+- Each cell should have its own subdirectory: `/designs/libs/library_name/cell_name/`
+- Files within a cell directory should be prefixed with the cell name (e.g., `cell_name.sch`, `cell_name.sym`)
+- **Exception**: Testbench directories (starting with `tb_`) are exempt from the file naming prefix requirement
+
+### Validation
+Use the provided sanity check script to validate your library structure:
+```bash
+cd designs/CI
+./library_check.sh
+```
+
+This script verifies:
+- Proper directory hierarchy (no files at inappropriate levels)
+- Correct file naming conventions for design libraries
+- Exempts testbench libraries from strict naming requirements
+
+
+## Example Design: 5-Transistor Single Stage OTA
+
+This project includes a reference design to demonstrate the library structure and design flow:
+
+### Libraries
+- **Design**: 5-Transistor Single Stage Operational Transconductance Amplifier (OTA)
+- **Library Location**: `core_analog`
+- **Testbench Location**: `tb_analog`
+
+
+### Usage
+1. **Design Files**: Navigate to `/designs/libs/core_analog/` to find the schematics and symbols of the OTA cell and parameterized unit transistor cells.
+2. **Testbench**: Use the verification setups in `/designs/libs/tb_analog/` to simulate and characterize the design.
+3. **Validation**: Run the library check to ensure proper file organization:
+   ```bash
+   cd designs/CI
+   ./library_check.sh
+   ```
+
+This example demonstrates the proper use of the library naming conventions (`core_*` for design libraries, `tb_*` for testbenches) and serves as a starting point for developing your own analog circuits.
+
 
 ## License
 
