@@ -2,3 +2,5 @@
 
 # Ignore all spice simulation results
 *.raw
+
+temp/  
