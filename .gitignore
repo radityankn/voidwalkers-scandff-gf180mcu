@@ -3,4 +3,6 @@
 # Ignore all spice simulation results
 *.raw
 
+.DS_Store
+
 temp/  

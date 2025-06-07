@@ -17,7 +17,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # SPDX-License-Identifier: Apache-2.0
+#
+# This file is based on start_vnc.sh from:
+# https://github.com/iic-jku/IIC-OSIC-TOOLS
+#
+# Modifications by Jianxun Zhu:
+# - Added: export DESIGNS="$(pwd)/designs" at the beginning to set designs
+#   directory to current directory's designs folder
 # ========================================================================
+
+# Set the DESIGNS environment variable to the 'designs' subdirectory of the current directory
+export DESIGNS="$(pwd)/designs"
 
 if [ -n "${DRY_RUN}" ]; then
 	echo "[INFO] This is a dry run, all commands will be printed to the shell (Commands printed but not executed are marked with $)!"
