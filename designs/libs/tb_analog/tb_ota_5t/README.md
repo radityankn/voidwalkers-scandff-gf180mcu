@@ -4,24 +4,12 @@ This directory contains test scripts for the 5-transistor Operational Transcondu
 
 ## Overview
 
-The `test_all.py` script provides automated testing for the OTA 5T design using NGSpice simulation. It includes two main test cases:
+The `test_all.py` script provides automated testing for the OTA 5T design using NGSpice simulation. It includes four main test cases:
 
-- **Operating Point Analysis (`test_op`)**: Performs DC operating point analysis with unity feedback and DC stimulus
-- **DC Sweep Analysis (`test_dc`)**: Performs DC sweep analysis to characterize the amplifier's behavior
-
-## Test Functions
-
-### `test_op()`
-- Runs operating point analysis
-- Uses unity feedback configuration
-- Applies DC stimulus voltage of 1.5V
-- Outputs results to `op.log`
-
-### `test_dc()`
-- Runs DC sweep analysis
-- Uses unity feedback configuration
-- Applies DC stimulus sweep
-- Outputs results to `results.raw`
+- **Operating Point Analysis (`test_op()`)**: Performs DC operating point analysis with unity feedback and DC stimulus
+- **DC Sweep Analysis (`test_dc()`)**: Performs DC sweep analysis to characterize the amplifier's behavior
+- **AC Analysis (`test_ac()`)**: Performs AC analysis to evaluate frequency response characteristics
+- **Transient Analysis (`test_tran()`)**: Performs transient analysis with sinusoidal stimulus
 
 ## Running the Tests
 
@@ -33,7 +21,7 @@ Run the script directly with Python to execute all tests:
 python test_all.py
 ```
 
-This will run both `test_op()` and `test_dc()` sequentially.
+This will run all four tests (`test_op()`, `test_dc()`, `test_ac()`, and `test_tran()`) sequentially.
 
 ### 2. Interactive Execution
 
@@ -44,11 +32,13 @@ You can run individual tests interactively in a Python shell:
 python
 
 # Import the test functions
-from test_all import *
+>>> from test_all import *
 
 # Run individual tests
-test_op()
-test_dc()
+>>> test_op()
+>>> test_dc()
+>>> test_ac()
+>>> test_tran()
 ```
 
 ### 3. Using pytest
@@ -62,6 +52,8 @@ pytest test_all.py
 # Run specific test
 pytest test_all.py::test_op
 pytest test_all.py::test_dc
+pytest test_all.py::test_ac
+pytest test_all.py::test_tran
 
 # Run with verbose output
 pytest -v test_all.py
@@ -80,6 +72,8 @@ pytest -v .
 Test results are stored in the simulation directory structure:
 - Operating point results: `/foss/designs/simulations/tb_ota_5t/test_op/op.log`
 - DC sweep results: `/foss/designs/simulations/tb_ota_5t/test_dc/results.raw`
+- AC analysis results: `/foss/designs/simulations/tb_ota_5t/test_ac/results.raw`
+- Transient analysis results: `/foss/designs/simulations/tb_ota_5t/test_tran/results.raw`
 
 ## Dependencies
 
@@ -102,5 +96,5 @@ tb_ota_5t/
 
 - The script automatically creates the necessary simulation directories
 - Each test generates a complete SPICE netlist including PVT headers, stimulus, and analysis commands
-- The testbench uses unity feedback configuration for both tests
+- The testbench uses unity feedback configuration for all tests
 - `fixture.py` is customized for each testbench and provides testbench-specific helper functions 
