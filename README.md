@@ -89,7 +89,7 @@ If you are familiar with git bash, feel free to use `start_vnc.sh`.
 
 This will take a while to pull the latest IIC-OSIC-TOOLS image. Have a coffee.
 
-![Screenshot placeholder: Terminal showing container startup messages]
+![Screenshot placeholder: Terminal showing container startup messages](docs/screenshots/docker_pull.png)
 
 ### Step 3: Access the Design Environment
 
