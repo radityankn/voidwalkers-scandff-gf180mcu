@@ -104,7 +104,6 @@ Once the container is running, you have two options to access the design environ
 2. Connect to: `localhost:5901`
 3. Enter password: `abc123`
 
-![Screenshot placeholder: VNC client connection dialog]
 
 #### Option B: Web Browser (noVNC)
 1. Open your web browser
@@ -112,7 +111,6 @@ Once the container is running, you have two options to access the design environ
 3. Enter password: `abc123`
 4. Click "Connect"
 
-![Screenshot placeholder: noVNC web interface login]
 
 ### Step 4: Open a Terminal
 
