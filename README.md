@@ -8,7 +8,7 @@ When you use this template, you get:
 
 - **Pre-configured Docker environment** with IIC-OSIC-TOOLS and GlobalFoundries 180nm PDK
 - **Cross-platform scripts** for launching the containerized design environment
-- **Example analog design** (5-Transistor OTA) with proper library structure
+- **Example analog design** (5-Transistor OTA) with proper library structure and testbench
 - **Library organization standards** with validation scripts
 - **VNC and web-based GUI access** for design tools like Xschem, Magic, and KLayout
 
