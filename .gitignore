@@ -19,3 +19,6 @@ temp/
 # Ignore all .pytest_cache files
 .pytest_cache/
 __pycache__/
+
+# Ignore Dev container settings
+.devcontainer/

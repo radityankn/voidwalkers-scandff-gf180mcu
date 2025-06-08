@@ -1,0 +1,6 @@
+# Git attributes file to handle line endings consistently
+# This prevents Windows users from committing CRLF line endings
+# ALL text files will use LF (Unix-style) line endings
+
+# Enforce LF line endings for ALL text files
+* text eol=lf 
