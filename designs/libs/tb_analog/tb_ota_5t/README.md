@@ -75,11 +75,38 @@ Test results are stored in the simulation directory structure:
 - AC analysis results: `/foss/designs/simulations/tb_ota_5t/test_ac/results.raw`
 - Transient analysis results: `/foss/designs/simulations/tb_ota_5t/test_tran/results.raw`
 
+## Visualization
+
+Use `results.ipynb` to process the spice RAW files and plot the waveforms interactively.
+
+### Running the Jupyter Notebook
+
+1. **Run simulations if not already**:
+   ```python
+   from test_all import *
+   test_op()    # Generate simulation data
+   test_dc()
+   test_ac() 
+   test_tran()
+   ```
+
+2. **Load and visualize results**:
+   - The notebook uses `wave_view` library to load SPICE raw files
+   - Interactive plots are configured via YAML for different analysis types
+   - Each simulation type (DC, AC, Transient) has dedicated visualization cells
+   - Plots include zoom, pan, and range slider controls for detailed analysis
+
+3. **Customization**:
+   - Modify YAML configurations in each cell to change plot appearance
+   - Add/remove signals by updating the `signals` section
+   - Process complex AC data for magnitude/phase plots
+
 ## Dependencies
 
 - `fixture.py` (customized test fixture module for this testbench, contains helper functions for netlist generation and simulation)
 - NGSpice simulator
 - Python 3.x
+- `wave_view` (for interactive visualization in Jupyter notebooks)
 
 ## File Structure
 
@@ -87,6 +114,7 @@ Test results are stored in the simulation directory structure:
 tb_ota_5t/
 ├── fixture.py           # Test fixture
 ├── test_all.py          # Main test script
+├── results.ipynb
 ├── tb_ota_5t.spice      # Testbench netlist
 ├── tb_ota_5t.sch        # Testbench schematic
 └── README.md            # This file
