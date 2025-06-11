@@ -20,5 +20,7 @@ temp/
 .pytest_cache/
 __pycache__/
 
+designs/sim
+
 # Ignore Dev container settings
 .devcontainer/
