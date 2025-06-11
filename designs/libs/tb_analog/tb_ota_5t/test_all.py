@@ -1,5 +1,6 @@
 from fixture import *
 
+
 # get the testbench directory and name
 script_path = os.path.abspath(__file__)
 TB_DIR = os.path.dirname(script_path)

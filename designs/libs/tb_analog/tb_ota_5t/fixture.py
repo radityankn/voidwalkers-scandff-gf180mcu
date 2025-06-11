@@ -10,7 +10,7 @@ def run_ngspice(netlist, sim_dir):
     print(f"Running ngspice in {sim_dir}")
     # run ngspice and save the output to a file
     result = subprocess.run(
-        ["ngspice", "-b", f"{sim_dir}/netlist.spice"], 
+        ["/foss/tools/ngspice/bin/ngspice", "-b", f"{sim_dir}/netlist.spice"], 
         capture_output=True, 
         text=True
     )
@@ -110,7 +110,7 @@ def netlist_sim_dc(start=0, stop=3.3, step=0.01, filename="results.raw"):
 
     """
 
-def netlist_sim_ac(start=1e3, stop=10e9, dec=10, filename="results.raw"):
+def netlist_sim_ac(start=1e3, stop=1e9, dec=10, filename="results.raw"):
     return f"""
     * ---------------- Simulation AC sweep ----------------
     .control
