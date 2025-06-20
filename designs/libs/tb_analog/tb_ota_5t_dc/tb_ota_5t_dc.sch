@@ -1,4 +1,4 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
@@ -44,6 +44,7 @@ OP
 show all
 
 DC V3 0 3.3 0.01
+TRAN 10u
 write tb_ota_5t.raw
 .endc
 "}
