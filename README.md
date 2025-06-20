@@ -1,6 +1,6 @@
 # IIC-OSIC-TOOLS Design Project Template (GlobalFoundries 180nm)
 
-This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
+This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
 
 ## What's Included
 
@@ -74,7 +74,7 @@ The project includes platform-specific scripts to launch the Docker container wi
 #### For Mac/Unix/Linux Systems:
 Open a terminal, navigate to you repository, and use the following command:
 ```bash
-./start_vnc.sh
+./start_chipathon_vnc.sh
 ```
 
 #### For Windows Systems:
@@ -83,9 +83,9 @@ Open a terminal, navigate to you repository, and use the following command:
 
 
 ```cmd
-.\start_vnc.bat
+.\start_chipathon_vnc.bat
 ```
-If you are familiar with git bash, feel free to use `start_vnc.sh`.
+If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 
 This will take a while to pull the latest IIC-OSIC-TOOLS image. Have a coffee.
 
