@@ -1,4 +1,4 @@
-# IIC-OSIC-TOOLS Design Project Template (GlobalFoundries 180nm)
+# IIC-OSIC-TOOLS Analog Design Project Template (GlobalFoundries 180nm)
 
 This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
 
