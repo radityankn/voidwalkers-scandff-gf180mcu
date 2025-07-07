@@ -9,4 +9,7 @@ source iic-pdk-script.sh gf180mcuD
 # Overriding .bashrc alias for cp to avoid the -i flag
 \cp -f ./.config/.xschem/xschemrc ~/.xschem/xschemrc
 
+export KLAYOUT_PATH=/foss/designs/klayout_lib:$KLAYOUT_PATH
+
 mkdir -p /headless/.xschem/simulations
+mkdir -p /headless/.klayout/libraries
