@@ -52,18 +52,18 @@ Run the CI scripts before **every** pull request.
 - `xvfb` must be installed for headless operation (for generation mode)
 
 ### update_klayout_library.py
-**Purpose:** Updates GDS library names to match their base filenames and creates KLayout symlinks for seamless library access.
+**Purpose:** Updates GDS library names to match their base filenames and forcefully refreshes KLayout symlinks.
 
 **What it does:**
 - **Library name updates:** Scans GDS files in `/foss/designs/libs` and forces their internal library names to match their base filenames (without extension)
 - **Force update:** Always updates library names regardless of current state to ensure consistency
-- **KLayout integration:** Creates symbolic links in `~/.klayout/libraries/` pointing to each GDS file, making them automatically available in KLayout's Library browser
-- **Smart detection:** Recognizes existing symlinks and won't recreate them if they point to the correct files
+- **KLayout refresh:** Wipes `~/.klayout/libraries/` directory completely and recreates all symbolic links
+- **Force library reload:** Ensures KLayout picks up all library name changes by recreating all symlinks
 - **Safety features:** Includes dry-run mode and backup options for safe operation
 
 **Usage:**
 ```bash
-# Standard operation - forces library name updates and creates symlinks
+# Standard operation - forces library updates and recreates all symlinks
 python update_klayout_library.py
 
 # Preview what would be done without making changes
@@ -72,7 +72,7 @@ python update_klayout_library.py --dry-run
 # Create backup files before modifying GDS files
 python update_klayout_library.py --backup
 
-# Skip symlink creation (only update library names)
+# Skip symlink creation/wiping (only update library names)
 python update_klayout_library.py --no-symlinks
 
 # Scan a different directory (default: /foss/designs/libs)
@@ -86,8 +86,8 @@ python update_klayout_library.py --base-dir /path/to/other/libs
 
 **Output:**
 - GDS files with library names matching their base filenames
-- Symbolic links in `~/.klayout/libraries/` for each processed GDS file
-- Libraries automatically appear in KLayout's Library browser
+- Completely refreshed `~/.klayout/libraries/` with new symbolic links
+- Libraries automatically appear in KLayout's Library browser with updated names
 
 ## Recommended Workflow
 1. Run `./library_check.sh` to validate library structure

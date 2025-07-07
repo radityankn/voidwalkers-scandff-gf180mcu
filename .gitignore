@@ -33,3 +33,5 @@ tools/
 
 .cursor/
 context/
+
+*.gds.backup

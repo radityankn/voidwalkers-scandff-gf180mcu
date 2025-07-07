@@ -4,10 +4,11 @@ Update KLayout Library Names for FOSS Flow
 
 Scans GDS files under /foss/designs/libs and changes their library name 
 from default (usually 'LIB') to match their base filename (without extension).
-Optionally creates symbolic links to ~/.klayout/libraries/ for KLayout access.
+Wipes ~/.klayout/libraries/ and recreates all symbolic links to force KLayout refresh.
 
 This CI script is designed to work within the FOSS design flow environment.
 Forces library name updates to match the base filename for consistency.
+Always recreates all KLayout symlinks to ensure library updates are loaded.
 
 Usage:
     python designs/CI/update_klayout_library.py [--dry-run] [--backup] [--no-symlinks]
@@ -110,26 +111,44 @@ def create_klayout_symlink(gds_file, cell_name, dry_run=False):
         symlink_name = f"{cell_name}.gds"
         symlink_path = klayout_libs_dir / symlink_name
         
-        if symlink_path.exists() or symlink_path.is_symlink():
-            # Check if it points to the same file
-            if symlink_path.is_symlink():
-                current_target = os.readlink(symlink_path)
-                if os.path.abspath(current_target) == abs_gds_path:
-                    return True, "Symlink already exists and points to correct file"
-                else:
-                    return False, f"Symlink exists but points to different file: {current_target}"
-            else:
-                return False, f"File exists but is not a symlink: {symlink_path}"
-        
         if dry_run:
             return True, f"Would create symlink: {symlink_path} → {abs_gds_path}"
         
-        # Create the symbolic link
+        # Create the symbolic link (will overwrite if exists)
+        if symlink_path.exists() or symlink_path.is_symlink():
+            symlink_path.unlink()
+        
         os.symlink(abs_gds_path, symlink_path)
         return True, f"Created symlink: {symlink_path} → {abs_gds_path}"
         
     except Exception as e:
         return False, f"Failed to create symlink: {str(e)}"
+
+
+def wipe_klayout_libraries(dry_run=False):
+    """Wipe the ~/.klayout/libraries directory to force library refresh."""
+    try:
+        klayout_libs_dir = Path.home() / ".klayout" / "libraries"
+        
+        if not klayout_libs_dir.exists():
+            return True, "KLayout libraries directory doesn't exist"
+        
+        if dry_run:
+            files = list(klayout_libs_dir.glob("*"))
+            return True, f"Would remove {len(files)} files from KLayout libraries directory"
+        
+        # Remove all files and symlinks in the directory
+        for item in klayout_libs_dir.iterdir():
+            if item.is_file() or item.is_symlink():
+                item.unlink()
+            elif item.is_dir():
+                import shutil
+                shutil.rmtree(item)
+        
+        return True, "Successfully wiped KLayout libraries directory"
+        
+    except Exception as e:
+        return False, f"Failed to wipe KLayout libraries: {str(e)}"
 
 
 def main():
@@ -163,6 +182,16 @@ def main():
     symlink_actions = []
     errors = []
     
+    # Always wipe KLayout libraries directory for fresh start
+    if not args.no_symlinks:
+        print(f"\nWiping KLayout libraries directory for fresh start...")
+        success, message = wipe_klayout_libraries(args.dry_run)
+        if success:
+            print(f"✓ {message}")
+        else:
+            print(f"✗ {message}")
+            return 1
+    
     # First pass: analyze all files
     for gds_file in gds_files:
         rel_path = os.path.relpath(gds_file)
@@ -184,17 +213,10 @@ def main():
             print(f"  → Will update library name: '{current_lib}' → '{target_lib}'")
             updates_needed.append((gds_file, target_lib))
         
-        # Check symlink status
+        # Always queue for symlink creation (since we wiped the directory)
         if not args.no_symlinks:
-            success, message = create_klayout_symlink(gds_file, target_lib, dry_run=True)
-            if success:
-                if "already exists" in message:
-                    print(f"  ✓ KLayout symlink: {message}")
-                else:
-                    print(f"  → KLayout symlink: {message}")
-                    symlink_actions.append((gds_file, target_lib))
-            else:
-                print(f"  ✗ KLayout symlink: {message}")
+            print(f"  → Will create KLayout symlink: {target_lib}.gds")
+            symlink_actions.append((gds_file, target_lib))
     
     # Summary
     print(f"\n{'='*60}")
@@ -237,7 +259,7 @@ def main():
             else:
                 print(f"  ✗ Failed: {error}")
     
-    # Create symlinks
+    # Create symlinks (always all of them since we wiped the directory)
     if symlink_actions and not args.no_symlinks:
         print(f"\nCreating KLayout symlinks...")
         for gds_file, cell_name in symlink_actions:
