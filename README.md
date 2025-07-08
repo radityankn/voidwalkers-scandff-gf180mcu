@@ -41,6 +41,18 @@ The workflow will proceed according to the proposed timeline, shown in figure be
 
 ![Project Timeline](images/work_timeline.png)
 
+Since the structure is quite different, the truth table is slightly diferent compared to the normal DFF. The truth table is as follows : 
+| D_IN | S_IN | S_EN | Q |
+|:----:|:----:|:----:|:-:|
+|1|0|0|0|
+|1|1|0|1|
+|0|1|0|1|
+|0|0|0|0|
+|0|0|1|0|
+|0|1|1|0|
+|1|0|1|1|
+|1|1|1|1|
+
 The work will be done in 3 months timespan, and consists of 4 crucial stages : 
 + Proposal Creation
 + Schematic design and Pre-Layout Simulation
