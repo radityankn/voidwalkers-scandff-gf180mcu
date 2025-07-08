@@ -24,7 +24,7 @@ We intended to apply the standar cells of microcontroller, so it has to be fast 
 | Cell Height       |7      |Layers|Per GF180MCU D specification|
 | Input ports       |4      |Ports |CLK, D, SI, SE|
 | Output ports      |2      |Ports |Q and ~Q|
-| Cell Area         |TBD    |um2   |we were unable to determine proposed area usage|
+| Cell Area         |TBD    |um2   |We are unable to determine proposed area usage at the moment|
 
 # Design and Work Details
 The design will be fully static, as the frequency is still low enough to be handled by static logic gates. The implementation will use the regular logic gate made of PFET and NFET, but will be adjusted to minimize area usage while retaining frequency and drive strength rating. The proposed gate-level diagram can be seen below : 
