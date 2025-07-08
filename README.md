@@ -22,8 +22,8 @@ We intended to apply the standar cells of microcontroller, so it has to be fast 
 | Maximum Frequency |100    |MHz   |proposed Fmax, based on GF180MCU D lib file|
 | Maximum Fanout    |4      |-     |Enables complex design when keeping standar cell count low|
 | Cell Height       |9      |Layers|Per GF180MCU D specification|
-| Input ports       |4      |Ports |CLK, D, SI, SE, RN|
-| Output ports      |2      |Ports |Q|
+| Input ports       |5      |Ports |CLK, D, SI, SE, RN|
+| Output ports      |1      |Ports |Q|
 | Cell Area         |TBD    |um2   |We are unable to determine proposed area usage at the moment|
 
 ### Design and Work Details
