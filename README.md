@@ -12,7 +12,7 @@ One implementation of DFT is making a testable elements to aid in verification p
 
 Scan DFF is essentially a regular DFF with a 2:1 multiplexer in its data port. This multiplexer is a selector between normal DFF operation and Scan DFF, which can be injected with arbitrary bits. The MUX has 2 inputs, Data in and Scan in, and select which one is to be passed based on the condition of Scan Enable pin. The block diagram is as follows : 
 
-<img alt="Scan DFF Block Diagram" src="images/scan_dff_block_diagram.png" width="537" />
+![Scan DFF Diagram](images/dflipflop.png)
 
 We intended to apply the standar cells of microcontroller, so it has to be fast and support 3.3V, though as long as the design is intended to be in 3.3V it is still perfectly usable. We also want this cell to support more fanout, so it can be used for more complex design without requiring additional buffers. This use case determines our specification listed in the table below : 
 
@@ -21,15 +21,19 @@ We intended to apply the standar cells of microcontroller, so it has to be fast 
 | Operating Voltage |3.3    |V     |       |
 | Maximum Frequency |100    |MHz   |proposed Fmax, based on GF180MCU D lib file|
 | Maximum Fanout    |4      |-     |Enables complex design when keeping standar cell count low|
-| Cell Height       |7      |Layers|Per GF180MCU D specification|
-| Input ports       |4      |Ports |CLK, D, SI, SE|
-| Output ports      |2      |Ports |Q and ~Q|
+| Cell Height       |9      |Layers|Per GF180MCU D specification|
+| Input ports       |4      |Ports |CLK, D, SI, SE, RN|
+| Output ports      |2      |Ports |Q|
 | Cell Area         |TBD    |um2   |We are unable to determine proposed area usage at the moment|
 
 ### Design and Work Details
-The design will be fully static, as the frequency is still low enough to be handled by static logic gates. The implementation will use the regular logic gate made of PFET and NFET, but will be adjusted to minimize area usage while retaining frequency and drive strength rating. The proposed gate-level diagram can be seen below : 
+The design will be fully static, as the frequency is still low enough to be handled by static logic gates. The implementation will use the regular logic gate made of PFET and NFET, but will be adjusted to minimize area usage while retaining frequency and drive strength rating. The proposed gate-level and functional-level diagram can be seen below : 
 
-![Scan DFF Gate-Level Diagram](images/scan_dff_gate_diagram.png)
+#### Gate Level
+![Scan DFF Gate-Level Diagram](images/diagram-logic.png)
+
+#### Functional Level
+![Scan DFF Functional-Level Diagram](images/functional_diagram.png)
 
 Our team consists of 3 people, which will handle the design and layouting with following task division : 
 + Flip Flop design and Layout : 
@@ -42,19 +46,20 @@ The workflow will proceed according to the proposed timeline, shown in figure be
 ![Project Timeline](images/work_timeline.png)
 
 Since the structure is quite different, the truth table is slightly diferent compared to the normal DFF. The truth table is as follows : 
-| D_IN | S_IN | S_EN | CLK | Q |
-|:----:|:----:|:----:|:---:|:-:|
-|1|0|0|Rising|0|
-|1|1|0|Rising|1|
-|0|1|0|Rising|1|
-|0|0|0|Rising|0|
-|0|0|1|Rising|0|
-|0|1|1|Rising|0|
-|1|0|1|Rising|1|
-|1|1|1|Rising|1|
-|x|x|x|0|Prev. State|
-|x|x|x|1|Prev. State|
-|x|x|x|Falling|Prev. State|
+| D    | SI   | SE   | RN | CLK     | Q           |
+|:----:|:----:|:----:|:--:|:-------:|:-----------:|
+| 1    | 0    | 0    | 1  | Rising  | 0           |
+| 1    | 1    | 0    | 1  | Rising  | 1           |
+| 0    | 1    | 0    | 1  | Rising  | 1           |
+| 0    | 0    | 0    | 1  | Rising  | 0           |
+| 0    | 0    | 1    | 1  | Rising  | 0           |
+| 0    | 1    | 1    | 1  | Rising  | 0           |
+| 1    | 0    | 1    | 1  | Rising  | 1           |
+| 1    | 1    | 1    | 1  | Rising  | 1           |
+| x    | x    | x    | 1  | 0       | Prev. State |
+| x    | x    | x    | 1  | 1       | Prev. State |
+| x    | x    | x    | 1  | Falling | Prev. State |
+
 
 The work will be done in 3 months timespan, and consists of 4 crucial stages : 
 + Proposal Creation
