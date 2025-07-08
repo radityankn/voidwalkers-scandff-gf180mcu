@@ -55,7 +55,7 @@ This repository is set up as a GitHub template. Using the template feature gives
    - Choose public or private
 5. Click **"Create repository"**
 
-![GitHub "Use this template" button](docs/screenshots/using_github_template.png)
+![GitHub "Use this template" button](screenshots/using_github_template.png)
 
 **Clone your new repository using GitHub Desktop:**
 1. Open GitHub Desktop
@@ -63,7 +63,7 @@ This repository is set up as a GitHub template. Using the template feature gives
 3. Select your newly created repository
 4. Choose your local directory and click "Clone"
 
-![GitHub Desktop clone dialog](docs/screenshots/clone_your_repo.png)
+![GitHub Desktop clone dialog](screenshots/clone_your_repo.png)
 
 ### Step 2: Launch the Docker Container
 
@@ -87,7 +87,7 @@ If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 
 This will take a while to pull the latest IIC-OSIC-TOOLS image. Have a coffee.
 
-![Screenshot placeholder: Terminal showing container startup messages](docs/screenshots/docker_pull.png)
+![Screenshot placeholder: Terminal showing container startup messages](screenshots/docker_pull.png)
 
 ### Step 3: Access the Design Environment
 
@@ -117,7 +117,7 @@ Once you're in the VNC session:
 2. Select "Terminal Emulator" (or similar option)
 3. You should automatically be in the `/foss/designs` directory
 
-![Desktop context menu with Terminal Emulator option](docs/screenshots/open_a_terminal.png)
+![Desktop context menu with Terminal Emulator option](screenshots/open_a_terminal.png)
 
 ### Step 5: Project Directory Structure
 
@@ -144,7 +144,7 @@ Run the following command inside the terminal within the VNC session to set up t
 source setup_pdk.sh
 ```
 
-![Terminal showing PDK setup completion](docs/screenshots/setup_pdk.png)
+![Terminal showing PDK setup completion](screenshots/setup_pdk.png)
 
 ### Step 7: Launch Design Tools
 
@@ -155,7 +155,7 @@ xschem
 
 You should see the Xschem GUI with available devices from `gf180mcu` and their testbenches.
 
-![Xschem interface with PDK libraries loaded](docs/screenshots/start_xschem.png)
+![Xschem interface with PDK libraries loaded](screenshots/start_xschem.png)
 
 ## Troubleshooting
 
