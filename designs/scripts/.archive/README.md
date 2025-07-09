@@ -51,7 +51,46 @@ Run the CI scripts before **every** pull request.
 - `xschem` must be installed and available in PATH (for generation mode)
 - `xvfb` must be installed for headless operation (for generation mode)
 
+### update_klayout_library.py
+**Purpose:** Updates GDS library names to match their base filenames and forcefully refreshes KLayout symlinks.
+
+**What it does:**
+- **Library name updates:** Scans GDS files in `/foss/designs/libs` and forces their internal library names to match their base filenames (without extension)
+- **Force update:** Always updates library names regardless of current state to ensure consistency
+- **KLayout refresh:** Wipes `~/.klayout/libraries/` directory completely and recreates all symbolic links
+- **Force library reload:** Ensures KLayout picks up all library name changes by recreating all symlinks
+- **Safety features:** Includes dry-run mode and backup options for safe operation
+
+**Usage:**
+```bash
+# Standard operation - forces library updates and recreates all symlinks
+python update_klayout_library.py
+
+# Preview what would be done without making changes
+python update_klayout_library.py --dry-run
+
+# Create backup files before modifying GDS files
+python update_klayout_library.py --backup
+
+# Skip symlink creation/wiping (only update library names)
+python update_klayout_library.py --no-symlinks
+
+# Scan a different directory (default: /foss/designs/libs)
+python update_klayout_library.py --base-dir /path/to/other/libs
+```
+
+**Requirements:**
+- KLayout Python API (`pya`) must be available
+- Write access to `~/.klayout/libraries/` directory
+- Read/write access to GDS files being processed
+
+**Output:**
+- GDS files with library names matching their base filenames
+- Completely refreshed `~/.klayout/libraries/` with new symbolic links
+- Libraries automatically appear in KLayout's Library browser with updated names
+
 ## Recommended Workflow
 1. Run `./library_check.sh` to validate library structure
 2. Run `./netlist_all.sh` to generate netlists for all schematics
-3. Commit both schematics and generated netlists to version control
+3. Run `./update_klayout_library.py` to update GDS library names and create KLayout symlinks
+4. Commit both schematics and generated netlists to version control

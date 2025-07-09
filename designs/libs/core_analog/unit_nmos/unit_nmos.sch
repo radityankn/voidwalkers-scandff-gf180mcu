@@ -1,4 +1,4 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
@@ -20,8 +20,8 @@ C {devices/iopin.sym} 60 70 0 0 {name=p4 lab=source}
 C {devices/iopin.sym} 90 0 0 0 {name=p1 lab=sub}
 C {devices/iopin.sym} -40 0 0 1 {name=p3 lab=gate}
 C {symbols/nfet_03v3.sym} 20 0 0 0 {name=M1
-L=0.5u
-W=4u
+L=0.28u
+W=3u
 nf=2
 m=\{M\}
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
