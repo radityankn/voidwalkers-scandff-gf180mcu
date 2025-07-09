@@ -1,26 +1,4 @@
-## PK Questions:
-- <mark>we need some instructions how to set up a shared repo between different team members; after following these instructions, everyone has their own repo .... </mark>
-- what about WSL, isn't that a required piece of software?
-- I have added something to my "/foss/designs/.designinit" as follows; that file is executed automatically by the current shell setup so it's a good place to add things. 
-
-```
-> more .designinit
-echo 'Reading User Preferences in /foss/designs/.designinit'
-
-tree() {
-  dir="${1:-.}"
-  depth="${2:-9999}"  # Default is effectively unlimited depth
-  find "$dir" -maxdepth "$depth" -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
-}
-
-cd /foss/designs
-
-echo '+-------------------------------------------------+'
-echo '| Initialize the PDK with "source ./setup_pdk.sh" |'
-echo '+-------------------------------------------------+'
-```
-
-# IIC-OSIC-TOOLS Design Project Template (GlobalFoundries 180nm)
+# IIC-OSIC-TOOLS Analog Design Project Template (GlobalFoundries 180nm)
 
 This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
 
@@ -67,13 +45,26 @@ You don't have to know how to use the `git` command. Although learning it helps 
 
 In this project we will be using the IIC-OSIC-TOOLS docker (https://github.com/iic-jku/IIC-OSIC-TOOLS) to setup our development environments.
 
-## Getting Started: Running the Tools for the First Time
+
+## Getting Started: Team Environment Setup
+
+### GitHub Collaborative Team Workflow (WIP)
+- team leader create the main project repo with template. (step 1)
+- each team member clones the repo
+- each team member starts their own feature branch ("feat-ota", "feat-ldo", "feat-padframe", etc.) 
+- **NOBODY** should develop on main. Only merge clean pull request.
+- don't be shy and commit often! (even when things are not completely working)
+- when the feature branches are ready, create a pull request (PR)
+- review the PR with the team, after which team leader merge the branch.
+- create branch -> develop -> pull request -> merge and delete branch -> (repeat)
 
 ### Step 1: Create Your Project Repository
 
 #### Use GitHub Template
 
 This repository is set up as a GitHub template. Using the template feature gives you a clean project without the template's commit history.
+
+
 
 1. Visit the template repository: [https://github.com/Jianxun/iic-osic-tools-project-template/](https://github.com/Jianxun/iic-osic-tools-project-template/)
 2. Click the green **"Use this template"** button
