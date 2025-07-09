@@ -1,4 +1,4 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
@@ -17,8 +17,8 @@ C {devices/iopin.sym} 90 0 0 0 {name=p1 lab=sub}
 C {devices/iopin.sym} -40 0 0 1 {name=p3 lab=gate}
 C {devices/code_shown.sym} -110 -130 0 0 {name=Parameters only_toplevel=false value=".param M=1"}
 C {symbols/pfet_03v3.sym} 20 0 0 0 {name=M3
-L=0.5u
-W=5u
+L=0.28u
+W=3u
 nf=2
 m=\{M\}
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
