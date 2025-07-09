@@ -2,13 +2,13 @@
 
 We are team VoidWalkers participating in Digital Track of SSCS Chipathon 2025. For our proposal, we would like to create a scan D Flip-Flop (Scan DFF), which hopefully enables digital designers to create digital designs with DFT capability in mind. 
 
-## Background 
+### Background 
 
 Design for Testability (DFT) is an important design principle especially in VLSI design. DFT encourages a designer to include features for testing after manufacturing, so the functionality of the device can be verified before delivery to customers. This is important in VLSI design because of the delicate manufacturing process of the chips, making conventional testing very hard or even impossible to produce reliable result since the DUT (Device Under Test) are very small and not every elements is accessible from outside. 
 
 One implementation of DFT is making a testable elements to aid in verification process later, which is what the Scan DFF aims to do. It enables the designer to inject arbitrary data to the registers, allowing more complex test with arbitrary data contents for debugging CPUs and the like. It is an integral part of JTAG Debugging mechanism
 
-## Overview
+### Overview
 
 Scan DFF is essentially a regular DFF with a 2:1 multiplexer in its data port. This multiplexer is a selector between normal DFF operation and Scan DFF, which can be injected with arbitrary bits. The MUX has 2 inputs, Data in and Scan in, and select which one is to be passed based on the condition of Scan Enable pin. The block diagram is as follows : 
 
@@ -29,10 +29,10 @@ We intended to apply the standar cells of microcontroller, so it has to be fast 
 ## Design and Work Details
 The design will be fully static, as the frequency is still low enough to be handled by static logic gates. The implementation will use the regular logic gate made of PFET and NFET, but will be adjusted to minimize area usage while retaining frequency and drive strength rating. The proposed gate-level and functional-level diagram can be seen below : 
 
-# Gate Level
+### Gate Level
 ![Scan DFF Gate-Level Diagram](images/diagram-logic.png)
 
-# Functional Level
+### Functional Level
 ![Scan DFF Functional-Level Diagram](images/functional_diagram.png)
 
 Our team consists of 3 people, which will handle the design and layouting with following task division : 
