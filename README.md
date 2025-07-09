@@ -1,4 +1,4 @@
-### VoidWalkers Scan D Flip-Flop for GF180MCU D (SSCS Chipathon 2025)
+# VoidWalkers Scan D Flip-Flop for GF180MCU D (SSCS Chipathon 2025)
 
 We are team VoidWalkers participating in Digital Track of SSCS Chipathon 2025. For our proposal, we would like to create a scan D Flip-Flop (Scan DFF), which hopefully enables digital designers to create digital designs with DFT capability in mind. 
 
