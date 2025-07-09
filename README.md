@@ -43,7 +43,7 @@ Our team consists of 3 people, which will handle the design and layouting with f
 
 The workflow will proceed according to the proposed timeline, shown in figure below : 
 
-![Project Timeline](images/work_timeline.png)
+<img alt="Project Timeline" src="images/work_timeline.png" width=500px />
 
 Since the structure is quite different, the truth table is slightly diferent compared to the normal DFF. The truth table is as follows : 
 | D    | SI   | SE   | RN | CLK     | Q           |
