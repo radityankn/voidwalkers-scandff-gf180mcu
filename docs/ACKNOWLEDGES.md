@@ -242,4 +242,4 @@ This example demonstrates the proper use of the library naming conventions (`cor
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details or you can refer to the Apache 2.0 License Document [here](http://www.apache.org/licenses/LICENSE-2.0)
