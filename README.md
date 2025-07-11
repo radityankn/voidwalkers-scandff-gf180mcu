@@ -1,25 +1,21 @@
 # IIC-OSIC-TOOLS Analog Design Project Template (GlobalFoundries 180nm)
 
-This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
+This repository is an analog design project template for the SSCS 2025 Chipathon (https://github.com/sscs-ose/sscs-chipathon-2025). The design environment is setup using the IIC-OSIC-TOOLS docker container (https://github.com/iic-jku/IIC-OSIC-TOOLS). The container is preconfigured with GlobalFoundries 180nm PDK (gf180mcuD).
 
 ## What's Included
 
 When you use this template, you get:
-
 - **Pre-configured Docker environment** with IIC-OSIC-TOOLS and GlobalFoundries 180nm PDK
-- **Cross-platform scripts** for launching the containerized design environment
-- **Example analog design** (5-Transistor OTA) with proper library structure and testbench
-- **Library organization standards** with validation scripts
 - **VNC and web-based GUI access** for design tools like Xschem, Ngspice, Magic, and KLayout
-
+- **Cross-platform scripts** for launching the containerized design environment
+- **Example analog schematic and layout design** (5-Transistor OTA) with proper library structure and testbench
 
 ## CAD Tool Computing Constellation
 First, review [this document](https://github.com/mosbiuschip/chipathon2025/tree/main/CAD_tool_computing_constellation) to get a sense of how the various pieces of software work together on your computer. 
 
-## Required S/W on Your Computer
+## Required Software on Your Computer
 
 Before you begin, you'll need to install the following required software:
-
 
 ### 1. GitHub Desktop
 
@@ -39,7 +35,8 @@ You don't have to know how to use the `git` command. Although learning it helps 
 - **Linux**: [Docker Desktop for Linux](https://docs.docker.com/desktop/install/linux-install/) or [Docker Engine](https://docs.docker.com/engine/install/)
 
 **System Requirements:**
-- **Windows**: Windows 10/11 with WSL2 enabled
+- **Windows**: Windows 10/11 with WSL 2 enabled  
+  > **Note:** Windows Subsystem for Linux (WSL 2) provides the lightweight virtualization layer that Docker Desktop relies on for Linux containers. If WSL 2 is not yet installed on your machine, follow Microsoft’s official guide: <https://learn.microsoft.com/windows/wsl/install>. After WSL 2 is enabled, Docker Desktop will automatically detect it; see Docker’s documentation for details: <https://docs.docker.com/desktop/windows/wsl/>.
 - **macOS**: macOS 10.15 or newer
 - **Linux**: 64-bit distribution with kernel 3.10+
 
@@ -48,15 +45,12 @@ In this project we will be using the IIC-OSIC-TOOLS docker (https://github.com/i
 
 ## Getting Started: Team Environment Setup
 
-### GitHub Collaborative Team Workflow (WIP)
-- team leader create the main project repo with template. (step 1)
-- each team member clones the repo
-- each team member starts their own feature branch ("feat-ota", "feat-ldo", "feat-padframe", etc.) 
-- **NOBODY** should develop on main. Only merge clean pull request.
-- don't be shy and commit often! (even when things are not completely working)
-- when the feature branches are ready, create a pull request (PR)
-- review the PR with the team, after which team leader merge the branch.
-- create branch -> develop -> pull request -> merge and delete branch -> (repeat)
+### GitHub Collaborative Team Workflow
+For the detailed branching and pull-request process see **[docs/team_workflow.md](docs/team_workflow.md)**.
+
+In brief:
+- The **team leader** creates the repository from this template and adds teammates as collaborators.
+- Every contributor works on a dedicated feature branch and opens a pull request for review before merging into `main`.  
 
 ### Step 1: Create Your Project Repository
 
@@ -142,31 +136,28 @@ Once you're in the VNC session, you can start running the design tools in the co
 
 ![Desktop context menu with Terminal Emulator option](docs/screenshots/open_a_terminal.png)
 
-### Step 5: Setup PDK Environment
-
-Run the following command inside the terminal within the VNC session to set up the GlobalFoundries 180nm PDK:
-
-```bash
-source setup_pdk.sh
-```
-
-![Terminal showing PDK setup completion](docs/screenshots/setup_pdk.png)
-
-*Note:* <mark>You need do `source setup_pdk.sh` for *every* new terminal you open.</mark>
-
-### Step 6: Launch Design Tools
+### Step 5: Launch Design Tools
 
 You can now start the design tools from the terminal. 
 
 #### Schematic Entry
 
-E.g., launch Xschem for schematic design:
+Launch Xschem for schematic design:
 ```bash
 xschem
 ```
 You should see the Xschem GUI with available devices from `gf180mcu` and their testbenches. Xschem has UI buttons to netlist and simulate your schematic. You can display results in Xschem or GAW (an external viewer).
 
 ![Xschem interface with PDK libraries loaded](docs/screenshots/start_xschem.png)
+
+#### Layout
+
+Launch Klayout for layout design:
+```bash
+./scripts/klayout_start.sh
+```
+![KLayout](docs/screenshots/start_klayout.png)
+
 
 #### Other Tools
 You can launch the other design tools with their appropriate commands. Take a look at [this document](https://github.com/mosbiuschip/chipathon2025/tree/main/CAD_tool_flow) for a brief overview of the analog full custom design CAD flow. 
@@ -210,9 +201,8 @@ The `/foss/designs` directory inside the Docker container is mounted from the `d
 project-root/
 ├── designs/                 # Your design files (mounted in container as /foss/designs)
 │   ├── libs/                   # Design libraries
-│   ├── simulations/            # Simulation results
-│   ├── setup_pdk.sh            # PDK setup script
-│   └── CI                      # scripts for library maintenance
+│   ├── simulations/            # Symbolic link to the Xschem simulation result folder
+│   └── scripts                 # scripts for launching tools and library maintenance
 ├── start_chipathon_vnc.sh   # Container launch script (Unix/Linux/Mac)
 ├── start_chipathon_vnc.bat  # Container launch script (Windows)
 └── README.md                # This file
