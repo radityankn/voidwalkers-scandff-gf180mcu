@@ -103,7 +103,7 @@ If you are familiar with git bash, feel free to use `start_chipathon_vnc.sh`.
 
 Now the script pulls the IIC-OSIC-TOOLS *chipathon* image. Have a coffee.
 
-![Screenshot placeholder: Terminal showing container startup messages](docs/screenshots/docker_pull.png)
+![Container startup messages](docs/screenshots/docker_pull.png)
 
 ### Step 3: Access the Design Environment in the Docker Container
 
@@ -148,6 +148,8 @@ xschem
 ```
 You should see the Xschem GUI with available devices from `gf180mcu` and their testbenches. Xschem has UI buttons to netlist and simulate your schematic. You can display results in Xschem or GAW (an external viewer).
 
+See the recommended schematic workflow **[docs/schematic_workflow.md](docs/schematic_workflow.md)**
+
 ![Xschem interface with PDK libraries loaded](docs/screenshots/start_xschem.png)
 
 #### Layout
@@ -156,6 +158,8 @@ Launch Klayout for layout design:
 ```bash
 ./scripts/klayout_start.sh
 ```
+See the recommended layout workflow with Klayout **[docs/layout_workflow.md](docs/layout_workflow.md)**
+
 ![KLayout](docs/screenshots/start_klayout.png)
 
 
@@ -214,7 +218,6 @@ project-root/
 
 The project follows specific naming conventions for organizing design libraries under `/designs/libs/`:
 
-
 ```
 /designs/libs/
 ├── core_*/          # Design libraries (core circuit cells)
@@ -231,18 +234,6 @@ Within each library directory:
 - Each cell should have its own subdirectory: `/designs/libs/library_name/cell_name/`
 - Files within a cell directory should be prefixed with the cell name (e.g., `cell_name.sch`, `cell_name.sym`)
 - **Exception**: Testbench directories (starting with `tb_`) are exempt from the file naming prefix requirement
-
-### Library Organization Validation
-Use the provided sanity check script to validate your library structure:
-```bash
-cd designs/CI
-./library_check.sh
-```
-
-This script verifies:
-- Proper directory hierarchy (no files at inappropriate levels)
-- Correct file naming conventions for design libraries
-- Exempts testbench libraries from strict naming requirements
 
 
 ## Example Design: 5-Transistor Single Stage OTA
@@ -266,10 +257,6 @@ This project includes a reference design to demonstrate the library structure an
 
 This example demonstrates the proper use of the library naming conventions (`core_*` for design libraries, `tb_*` for testbenches) and serves as a starting point for developing your own analog circuits.
 
-
-## Synching your Repo
-
-Develop a good strategy (with your team mates) for repo file management on GitHub with the use of *feature* branches that get *merged* into the main branch regularly by the team lead. 
 
 ## License
 
