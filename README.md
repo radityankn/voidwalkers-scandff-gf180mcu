@@ -37,9 +37,9 @@ The design will be fully static, as the frequency is still low enough to be hand
 
 Our team consists of 3 people, which will handle the design and layouting with following task division : 
 + Flip Flop design and Layout : 
-    1. Aakarsh
+    1. Aakarsh A
     2. Ahmad Jabar Ilmi
-+ Multiplexer Design and Layout : Snighdha 
++ Multiplexer Design and Layout : Sarah Beatrix Sitorus 
 
 The workflow will proceed according to the proposed timeline, shown in figure below : 
 
