@@ -4,38 +4,38 @@ K {}
 V {}
 S {}
 E {}
-N 70 -580 70 -560 {lab=VDD}
-N 70 -580 280 -580 {lab=VDD}
-N 280 -580 280 -560 {lab=VDD}
-N 170 -630 170 -580 {lab=VDD}
-N 70 -500 70 -470 {lab=#net1}
-N 70 -470 280 -470 {lab=#net1}
-N 280 -500 280 -470 {lab=#net1}
-N 180 -470 180 -440 {lab=#net1}
-N 180 -440 240 -440 {lab=#net1}
+N 70 -580 70 -560 {lab=vcc}
+N 70 -580 280 -580 {lab=vcc}
+N 170 -630 170 -580 {lab=vcc}
+N 70 -500 70 -470 {lab=OUT}
+N 70 -470 280 -470 {lab=OUT}
+N 180 -470 180 -440 {lab=OUT}
+N 180 -440 240 -440 {lab=OUT}
 N -20 -530 30 -530 {lab=A}
-N 200 -530 240 -530 {lab=B}
-N 180 -440 180 -380 {lab=#net1}
-N 180 -210 180 -180 {lab=GND}
-N 180 -320 180 -270 {lab=#net2}
-N 20 -350 140 -350 {lab=A}
-N 20 -530 20 -350 {lab=A}
-N 70 -530 90 -530 {lab=VDD}
-N 90 -560 90 -530 {lab=VDD}
-N 70 -560 90 -560 {lab=VDD}
-N 280 -530 300 -530 {lab=VDD}
-N 300 -560 300 -530 {lab=VDD}
-N 280 -560 300 -560 {lab=VDD}
-N 180 -240 180 -210 {lab=GND}
-N 180 -350 200 -350 {lab=GND}
-N 200 -350 200 -210 {lab=GND}
-N 180 -210 200 -210 {lab=GND}
-N 220 -530 220 -490 {lab=B}
-N 350 -490 350 -120 {lab=B}
-N 110 -120 350 -120 {lab=B}
-N 110 -240 110 -120 {lab=B}
-N 110 -240 140 -240 {lab=B}
-N 220 -490 350 -490 {lab=B}
+N 180 -440 180 -380 {lab=OUT}
+N 180 -210 180 -180 {lab=gnd}
+N 180 -320 180 -270 {lab=#net1}
+N 70 -530 90 -530 {lab=vcc}
+N 90 -560 90 -530 {lab=vcc}
+N 70 -560 90 -560 {lab=vcc}
+N 280 -500 280 -470 {lab=OUT}
+N 280 -580 280 -560 {lab=vcc}
+N 280 -530 300 -530 {lab=vcc}
+N 300 -570 300 -530 {lab=vcc}
+N 280 -570 300 -570 {lab=vcc}
+N 180 -240 200 -240 {lab=gnd}
+N 180 -350 200 -350 {lab=gnd}
+N 200 -350 200 -240 {lab=gnd}
+N 200 -240 200 -210 {lab=gnd}
+N 180 -210 200 -210 {lab=gnd}
+N -20 -530 -20 -400 {lab=A}
+N -110 -400 -20 -400 {lab=A}
+N -20 -400 -20 -240 {lab=A}
+N -20 -240 140 -240 {lab=A}
+N -110 -350 140 -350 {lab=B}
+N 140 -530 240 -530 {lab=B}
+N 110 -530 140 -530 {lab=B}
+N 110 -530 110 -350 {lab=B}
 C {symbols/nfet_03v3.sym} 160 -350 0 0 {name=M1
 L=0.28u
 W=0.22u
@@ -92,9 +92,10 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {ipin.sym} 200 -530 0 0 {name=p1 lab=B}
-C {ipin.sym} -20 -530 0 0 {name=p2 lab=A}
-C {vdd.sym} 170 -630 0 0 {name=l1 lab=VDD}
-C {gnd.sym} 180 -180 0 0 {name=l2 lab=GND}
+C {ipin.sym} -110 -400 0 0 {name=p1 lab=A}
+C {ipin.sym} -110 -350 0 0 {name=p2 lab=B}
 C {opin.sym} 240 -440 0 0 {name=p3 lab=OUT
+}
+C {iopin.sym} 170 -630 0 0 {name=p4 lab=vcc}
+C {iopin.sym} 180 -180 0 0 {name=p5 lab=gnd
 }
