@@ -4,101 +4,95 @@ K {}
 V {}
 S {}
 E {}
-B 2 580 -1470 1380 -1070 {flags=graph
+B 2 360 -260 1160 140 {flags=graph
 y1=0
-y2=2
-ypos1=0
-ypos2=2
+y2=3.4
+ypos1=-0.24178381
+ypos2=3.6941412
 divy=5
-subdivy=1
+subdivy=4
 unity=1
-x1=5e-07
-x2=1.05e-05
+x1=-1.254091e-07
+x2=7.1301254e-07
 divx=5
-subdivx=1
+subdivx=4
 xlabmag=1.0
 ylabmag=1.0
-node=""
-color=""
 dataset=-1
 unitx=1
 logx=0
 logy=0
-}
-B 2 -430 420 370 820 {flags=graph
-y1=-1.6
-y2=0.4
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=4.118093e-06
-x2=1.0748129e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="y
-i(v3)
-i(v2)
-i(v1)"
-color="6 9 8 7"
-dataset=-1
-unitx=1
-logx=0
-logy=0
+legend=0
+digital=1
+autoload=0
+rainbow=1
+hilight_wave=2
+rawfile=$netlist_dir/mux_nand_tb.raw
 sim_type=tran
-rawfile=$netlist_dir/mux_nand_tb.raw}
-T {.include mux_nand.spice
-.include nand.spice
-.include inv.spice
+color="4 5 6 7"
+node="a
+b
+s
+y"}
+N -270 -0 -100 0 {lab=S}
+N 200 0 257.5 0 {lab=y}
+N -270 -30 -270 -0 {lab=S}
+N -180 20 -180 60 {lab=B}
+N -140 -20 -100 -20 {lab=A}
+N -140 -40 -140 -20 {lab=A}
+N -200 -120 -200 -20 {lab=A}
+N -320 -120 -200 -120 {lab=A}
+N -320 -120 -320 -110 {lab=A}
+N -620 -50 -320 -50 {lab=GND}
+N -180 20 -100 20 {lab=B}
+N -330 20 -180 20 {lab=B}
+N -330 20 -330 70 {lab=B}
+N -430 130 -330 130 {lab=GND}
+N -580 60 -580 130 {lab=GND}
+N -580 130 -430 130 {lab=GND}
+N -430 130 -430 170 {lab=GND}
+N -620 130 -580 130 {lab=GND}
+N -620 -50 -620 130 {lab=GND}
+N -580 -0 -270 -0 {lab=S}
+N -200 -20 -140 -20 {lab=A}
+N 200 20 200 130 {lab=GND}
+N -330 130 200 130 {lab=GND}
+N 200 -20 300 -20 {lab=#net1}
+N 300 40 300 130 {lab=GND}
+N 200 130 300 130 {lab=GND}
+C {vsource.sym} -320 -80 0 0 {name=V1 value="PULSE(0 3.3 0n 1n 1n 50n 100n)" savecurrent=false
+}
+C {vsource.sym} -330 100 0 0 {name=V2 value="PULSE(0 3.3 0n 1n 1n 100n 200n)"  savecurrent=false}
+C {vsource.sym} -580 30 0 0 {name=V3 value="PULSE(0 3.3 0n 1n 1n 200n 400n)" savecurrent=false}
+C {opin.sym} 255 0 0 0 {name=p1 lab=y}
+C {lab_wire.sym} -140 -40 0 0 {name=p2 sig_type=std_logic lab=A
+}
+C {lab_wire.sym} -180 60 0 0 {name=p4 sig_type=std_logic lab=B}
+C {lab_wire.sym} -270 -30 0 0 {name=p3 sig_type=std_logic lab=S}
+C {gnd.sym} -430 170 0 0 {name=l1 lab=GND}
+C {devices/code_shown.sym} 230 -840 0 0 {name=NGSPICE1 only_toplevel=true
+value="
+.options method=trap rawfile=binary
+.options solver=klu nomod
 .control
 save all
-tran 1n 1u
-plot V(A) V(B) V(S) V(Y)
+
+tran 1n 800n
+
+write mux_nand_tb.raw
 .endc
-} 375 5 0 0 0.4 0.4 {}
-N 202.5 -20 257.5 -20 {lab=y}
-N -315 -112.5 -197.5 -112.5 {lab=#net1}
-N -197.5 -112.5 -197.5 -22.5 {lab=#net1}
-N -197.5 -22.5 -100 -20 {lab=#net1}
-N -575 0 -100 0 {lab=#net2}
-N -580 115 -475 115 {lab=GND}
-N -475 115 -475 157.5 {lab=GND}
-N -475 132.5 -317.5 132.5 {lab=GND}
-N -475 132.5 -475 157.5 {lab=GND}
-N -642.5 -52.5 -315 -52.5 {lab=GND}
-N -642.5 -52.5 -642.5 140 {lab=GND}
-N -642.5 140 -642.5 160 {lab=GND}
-N -642.5 160 -475 157.5 {lab=GND}
-N -580 115 -575 62.5 {lab=GND}
-N -575 60 -575 62.5 {lab=GND}
-N 200 -20 202.5 -20 {lab=y}
-N -317.5 22.5 -317.5 70 {lab=#net3}
-N -317.5 22.5 -100 20 {lab=#net3}
-C {vsource.sym} -315 -82.5 0 0 {name=V1 value="PULSE(0 5 0n 1n 1n 100n 200n)" savecurrent=false
-}
-C {vsource.sym} -317.5 102.5 0 0 {name=V2 value="PULSE(0 5 0n 1n 1n 100n 200n)"  savecurrent=false}
-C {vsource.sym} -575 30 0 0 {name=V3 value="PULSE(0 5 0n 1n 1n 300n 600n)" savecurrent=false}
-C {opin.sym} 255 -20 0 0 {name=p1 lab=y}
-C {gnd.sym} -475 157.5 0 0 {name=l1 lab=GND}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} 50 0 0 0 {name=x1}
-C {devices/code_shown.sym} -1050 -510 0 0 {name=MODELS only_toplevel=true
+"}
+C {devices/code_shown.sym} 130 -590 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} -1030 -810 0 0 {name=NGSPICE only_toplevel=true
-value="
-.options method=trap rawfile=binary
-.options solver=klu nomod
-.temp 85
-.control
-save all
-tran 1n 2u
-write mux_nand_tb.raw
-plot v(A) v(B) v(S) v(MUX_OUT)
-.endc
-"}
+C {vsource.sym} 300 10 0 0 {name=V4 value=3.3 savecurrent=false}
+C {devices/launcher.sym} 425 -415 0 0 {name=h2
+descr="Click left mouse button here with control key
+pressed to load/unload waveforms in graph."
+tclcommand="
+xschem raw_read $netlist_dir/mux_nand_tb.raw tran"
+}
+C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} 50 0 0 0 {name=x1}
