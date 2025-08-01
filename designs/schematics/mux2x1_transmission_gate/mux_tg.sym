@@ -1,0 +1,30 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 7 130 -50 150 -50 {}
+L 7 -150 20 -130 20 {}
+L 7 -150 0 -130 0 {}
+L 7 130 0 150 0 {}
+L 7 -150 40 -130 40 {}
+L 7 130 50 150 50 {}
+B 5 147.5 -52.5 152.5 -47.5 {name=vdd dir=inout}
+B 5 -152.5 17.5 -147.5 22.5 {name=pfet_gate dir=inout}
+B 5 -152.5 -2.5 -147.5 2.5 {name=in dir=inout}
+B 5 147.5 -2.5 152.5 2.5 {name=out dir=inout}
+B 5 -152.5 37.5 -147.5 42.5 {name=nfet_gate dir=inout}
+B 5 147.5 47.5 152.5 52.5 {name=gnd dir=inout}
+P 4 5 130 -60 -130 -60 -130 60 130 60 130 -60 {}
+T {@symname} -45 -6 0 0 0.3 0.3 {}
+T {@name} 135 -72 0 0 0.2 0.2 {}
+T {vdd} 125 -54 0 1 0.2 0.2 {}
+T {pfet_gate} -125 16 0 0 0.2 0.2 {}
+T {in} -125 -4 0 0 0.2 0.2 {}
+T {out} 125 -4 0 1 0.2 0.2 {}
+T {nfet_gate} -125 36 0 0 0.2 0.2 {}
+T {gnd} 125 46 0 1 0.2 0.2 {}
