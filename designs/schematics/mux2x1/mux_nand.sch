@@ -45,10 +45,6 @@ N 0 400 0 450 {lab=gnd}
 N 200 310 200 400 {lab=gnd}
 N -360 330 -360 400 {lab=gnd}
 N -360 400 -0 400 {lab=gnd}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sym} -510 310 0 0 {name=x1}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym} 10 150 0 0 {name=x2}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym} 10 290 0 0 {name=x3}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym} 460 160 0 0 {name=x4}
 C {ipin.sym} -740 290 0 0 {name=p1 lab=S}
 C {ipin.sym} -170 130 0 0 {name=p2 lab=A
 }
@@ -57,3 +53,7 @@ C {opin.sym} 680 160 0 0 {name=p4 lab=y}
 C {iopin.sym} -40 10 0 0 {name=p5 lab=vcc}
 C {iopin.sym} 0 450 0 0 {name=p6 lab=gnd
 }
+C {mux2x1/inv.sym} -510 310 0 0 {name=x1}
+C {mux2x1/nand.sym} 10 150 0 0 {name=x5}
+C {mux2x1/nand.sym} 10 290 0 0 {name=x2}
+C {mux2x1/nand.sym} 460 160 0 0 {name=x3}
