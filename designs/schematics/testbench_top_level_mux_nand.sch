@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 B 2 40 -120 840 280 {flags=graph
 y1=0
@@ -78,7 +77,7 @@ C {lab_wire.sym} -270 -30 3 1 {name=p11 sig_type=std_logic lab=VSS}
 C {gnd.sym} -270 30 0 1 {name=l1 lab=GND}
 C {lab_wire.sym} -330 -210 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -330 -150 0 0 {name=p5 sig_type=std_logic lab=RN}
-C {devices/launcher.sym} 195 -295 0 0 {name=h1
+C {devices/launcher.sym} 195 -305 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
 tclcommand="
@@ -105,5 +104,5 @@ C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x3}
-C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x2}
