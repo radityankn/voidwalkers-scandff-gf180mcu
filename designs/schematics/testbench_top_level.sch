@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 B 2 40 -120 840 280 {flags=graph
 y1=0
@@ -13,8 +12,8 @@ ypos2=2.72
 divy=5
 subdivy=4
 unity=1
-x1=-1.4088568e-07
-x2=1.0123815e-06
+x1=-1.9854904e-07
+x2=9.5471814e-07
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -105,5 +104,5 @@ C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x3}
-C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
+C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
+C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}

@@ -96,4 +96,4 @@ C {lab_wire.sym} -10 -190 0 1 {name=p15 sig_type=std_logic lab=QN}
 C {vsource.sym} -800 -20 0 0 {name=V5 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -800 -70 3 1 {name=p16 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -800 40 3 0 {name=p17 sig_type=std_logic lab=VSS}
-C {schematics/d_flip_flop_r.sym} -180 -190 0 0 {name=x1}
+C {schematics/d_flip_flop/d_flip_flop_r.sym} -180 -190 0 0 {name=x1}

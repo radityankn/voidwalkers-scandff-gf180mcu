@@ -21,8 +21,6 @@ N -430 -210 -330 -210 {lab=VSS}
 N -430 -210 -430 -110 {lab=VSS}
 N -450 -110 -430 -110 {lab=VSS}
 N -450 -230 -330 -230 {lab=VDD}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1_transmission_gate/mux_toplevel.sym} -600 -170 0 0 {name=x2}
 C {ipin.sym} -750 -230 0 0 {name=p2 lab=A}
 C {ipin.sym} -750 -210 0 0 {name=p3 lab=B}
 C {ipin.sym} -750 -190 0 0 {name=p7 lab=S}
@@ -35,3 +33,5 @@ C {opin.sym} -20 -190 0 0 {name=p18 lab=QN}
 C {opin.sym} -20 -170 0 0 {name=p19 lab=PROBE[3:0]}
 C {ipin.sym} -330 -150 0 0 {name=p6 lab=RN}
 C {ipin.sym} -330 -170 0 0 {name=p13 lab=CLK}
+C {schematics/mux2x1_transmission_gate/mux_toplevel.sym} -600 -170 0 0 {name=x1}
+C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}

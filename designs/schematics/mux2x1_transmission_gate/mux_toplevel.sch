@@ -37,9 +37,6 @@ N 40 -190 40 -60 {lab=se_in}
 N -380 10 -380 120 {lab=se_in}
 N -380 10 40 10 {lab=se_in}
 N 40 -60 40 10 {lab=se_in}
-C {mux_transmission_gate/mux_ctrl_logic.sym} -210 120 0 0 {name=x1}
-C {mux_transmission_gate/mux_tg.sym} 250 -230 0 0 {name=x2}
-C {mux_transmission_gate/mux_tg.sym} 250 -80 0 0 {name=x3}
 C {iopin.sym} 440 -310 0 0 {name=p1 lab=vdd}
 C {opin.sym} 580 -160 0 0 {name=p5 lab=out}
 C {ipin.sym} -410 -230 0 0 {name=p6 lab=data}
@@ -50,3 +47,6 @@ C {iopin.sym} 430 10 0 0 {name=p4 lab=vss}
 C {iopin.sym} -40 210 0 0 {name=p9 lab=vss}
 C {iopin.sym} -40 40 0 0 {name=p10 lab=vdd}
 C {iopin.sym} 430 -170 0 0 {name=p11 lab=vss}
+C {schematics/mux2x1_transmission_gate/mux_tg.sym} 250 -230 0 0 {name=x2}
+C {schematics/mux2x1_transmission_gate/mux_tg.sym} 250 -80 0 0 {name=x3}
+C {schematics/mux2x1_transmission_gate/mux_ctrl_logic.sym} -210 120 0 0 {name=x1}

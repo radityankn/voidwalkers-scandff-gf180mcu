@@ -104,5 +104,5 @@ C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x2}
+C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
+C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}
