@@ -1,8 +1,9 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 B 2 40 -120 840 280 {flags=graph
 y1=0
@@ -12,8 +13,8 @@ ypos2=2.72
 divy=5
 subdivy=4
 unity=1
-x1=3.2104412e-08
-x2=1.1853717e-06
+x1=-1.4088568e-07
+x2=1.0123815e-06
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -34,13 +35,17 @@ digital=1
 autoload=0
 rainbow=1
 hilight_wave=2}
-N -30 -210 -10 -210 {lab=Q}
-N -30 -230 -10 -230 {lab=CLK_INV}
-N -30 -190 -10 -190 {lab=QN}
-N -30 -170 -10 -170 {lab=PROBE[3:0]}
-N -380 -190 -330 -190 {lab=#net1}
+N -380 -190 -320 -190 {lab=#net1}
 N -450 -210 -380 -210 {lab=#net1}
 N -380 -210 -380 -190 {lab=#net1}
+N -330 -230 -320 -230 {lab=VDD}
+N -330 -210 -320 -210 {lab=VSS}
+N -330 -170 -320 -170 {lab=CLK}
+N -330 -150 -320 -150 {lab=RN}
+N -20 -230 -10 -230 {lab=CLK_INV}
+N -20 -210 -10 -210 {lab=Q}
+N -20 -190 -10 -190 {lab=QN}
+N -20 -170 -10 -170 {lab=PROBE[3:0]}
 C {vsource.sym} -550 -10 0 0 {name=V1 value="PULSE(0 3.3 0n 0.1n 0.1n 5n 10n)" savecurrent=false}
 C {lab_wire.sym} -550 -40 3 1 {name=p24 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} -330 -230 0 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -100,5 +105,5 @@ C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
-C {schematics/d_flip_flop_r.sym} -180 -190 0 0 {name=x2}
+C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x3}
+C {/home/raditya/Documents/mySpace/Projects/Chipathon_2025/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
