@@ -82,7 +82,6 @@ xschem raw_read $netlist_dir/testbench_top_level.raw tran"
 C {lab_wire.sym} -10 -230 0 1 {name=p13 sig_type=std_logic lab=CLK_INV}
 C {lab_wire.sym} -10 -170 0 1 {name=p14 sig_type=std_logic lab=PROBE[3:0]}
 C {lab_wire.sym} -10 -190 0 1 {name=p15 sig_type=std_logic lab=QN}
-C {mux2x1/mux_nand.sym} -600 -210 0 0 {name=x2}
 C {lab_wire.sym} -450 -190 0 1 {name=p16 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -450 -230 0 1 {name=p17 sig_type=std_logic lab=VDD}
 C {vsource.sym} -800 -10 0 0 {name=V5 value="PULSE(0 3.3 0n 0.1n 0.1n 50n 100n)" savecurrent=false
@@ -101,4 +100,5 @@ C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {d_flip_flop_r.sym} -180 -190 0 0 {name=x1}
+C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
+C {schematics/d_flip_flop_r.sym} -180 -190 0 0 {name=x2}
