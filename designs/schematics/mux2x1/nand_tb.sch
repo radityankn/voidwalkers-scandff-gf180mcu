@@ -80,5 +80,5 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym} -1120 -410 0 0 {name=x1}
 C {vsource.sym} -840 -410 0 0 {name=V2 value=3.3 savecurrent=false}
+C {schematics/mux2x1/nand.sym} -1120 -410 0 0 {name=x1}

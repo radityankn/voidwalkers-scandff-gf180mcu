@@ -71,7 +71,6 @@ N -230 80 -230 150 {lab=scan_enable}
 N -450 210 -450 240 {lab=GND}
 N 120 120 120 210 {lab=GND}
 N -450 210 120 210 {lab=GND}
-C {mux_transmission_gate/mux_toplevel.sym} -30 0 0 0 {name=x1}
 C {lab_pin.sym} 110 -130 0 0 {name=p1 sig_type=std_logic lab=vdd
 }
 C {lab_pin.sym} 210 0 0 1 {name=p3 sig_type=std_logic lab=out}
@@ -103,3 +102,4 @@ plot out
 .endc
 .end
 "}
+C {schematics/mux2x1_transmission_gate/mux_toplevel.sym} -30 0 0 0 {name=x1}

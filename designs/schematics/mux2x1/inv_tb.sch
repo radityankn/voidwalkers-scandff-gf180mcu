@@ -66,5 +66,5 @@ C {gnd.sym} -380 30 0 0 {name=l1 lab=GND}
 C {vsource.sym} -760 10 0 0 {name=V1 value="PULSE(0 3.3 0n 1n 1n 10n 20n)" savecurrent=false}
 C {lab_wire.sym} -350 -10 0 0 {name=p1 sig_type=std_logic lab=y}
 C {vsource.sym} -300 0 0 0 {name=V2 value=3.3 savecurrent=false}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sym} -540 -10 0 0 {name=x1}
 C {lab_wire.sym} -740 -50 0 0 {name=p2 sig_type=std_logic lab=in}
+C {schematics/mux2x1/inv.sym} -540 -10 0 0 {name=x1}

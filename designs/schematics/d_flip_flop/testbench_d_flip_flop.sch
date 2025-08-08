@@ -45,7 +45,6 @@ N -30 -210 -10 -210 {lab=Q}
 N -30 -230 -10 -230 {lab=CLK_INV}
 N -30 -190 -10 -190 {lab=QN}
 N -30 -170 -10 -170 {lab=PROBE[3:0]}
-C {d_flip_flop.sym} -180 -190 0 0 {name=x1}
 C {vsource.sym} -550 -10 0 0 {name=V1 value="PULSE(0 3.3 0n 0.1n 0.1n 5n 10n)" savecurrent=false}
 C {lab_wire.sym} -550 -60 3 1 {name=p24 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} -330 -230 0 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -91,3 +90,4 @@ xschem raw_read $netlist_dir/testbench_d_flip_flop.raw tran"
 C {lab_wire.sym} -10 -230 0 1 {name=p13 sig_type=std_logic lab=CLK_INV}
 C {lab_wire.sym} -10 -170 0 1 {name=p14 sig_type=std_logic lab=PROBE[3:0]}
 C {lab_wire.sym} -10 -190 0 1 {name=p15 sig_type=std_logic lab=QN}
+C {schematics/d_flip_flop/d_flip_flop.sym} -180 -190 0 0 {name=x1}

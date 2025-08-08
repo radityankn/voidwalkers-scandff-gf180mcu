@@ -21,7 +21,6 @@ N -420 -190 -380 -190 {lab=#net1}
 N -400 -210 -330 -210 {lab=VSS}
 N -400 -210 -400 -170 {lab=VSS}
 N -450 -170 -400 -170 {lab=VSS}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
 C {ipin.sym} -750 -230 0 0 {name=p2 lab=A}
 C {ipin.sym} -750 -210 0 0 {name=p3 lab=B}
 C {ipin.sym} -750 -190 0 0 {name=p7 lab=S}
@@ -34,4 +33,5 @@ C {opin.sym} -20 -190 0 0 {name=p18 lab=QN}
 C {opin.sym} -20 -170 0 0 {name=p19 lab=PROBE[3:0]}
 C {ipin.sym} -330 -150 0 0 {name=p6 lab=RN}
 C {ipin.sym} -330 -170 0 0 {name=p13 lab=CLK}
-C {voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x2}
+C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
+C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}
