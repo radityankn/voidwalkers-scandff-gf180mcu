@@ -76,10 +76,10 @@ N 1530 -880 1530 -870 {lab=VDD}
 N 1570 -570 1660 -570 {lab=PROBE[3]}
 N 1690 -820 1690 -570 {lab=PROBE[3]}
 N 1570 -820 1660 -820 {lab=PROBE[3]}
-N 1570 -760 1610 -760 {lab=CLK_INV}
+N 1570 -760 1610 -760 {lab=CLK}
 N 1660 -570 1690 -570 {lab=PROBE[3]}
 N 1660 -820 1690 -820 {lab=PROBE[3]}
-N 1570 -630 1610 -630 {lab=CLK}
+N 1570 -630 1610 -630 {lab=CLK_INV}
 N 1690 -700 1720 -700 {lab=PROBE[3]}
 N 1740 -700 1740 -260 {lab=PROBE[3]}
 N 1720 -700 1740 -700 {lab=PROBE[3]}
@@ -454,8 +454,8 @@ C {lab_wire.sym} 1450 -630 0 0 {name=p55 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1450 -570 0 0 {name=p56 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1530 -510 3 0 {name=p57 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1530 -880 1 0 {name=p58 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1610 -760 0 1 {name=p59 sig_type=std_logic lab=CLK_INV}
-C {lab_wire.sym} 1610 -630 0 1 {name=p60 sig_type=std_logic lab=CLK}
+C {lab_wire.sym} 1610 -760 0 1 {name=p59 sig_type=std_logic lab=CLK}
+C {lab_wire.sym} 1610 -630 0 1 {name=p60 sig_type=std_logic lab=CLK_INV}
 C {symbols/pfet_03v3.sym} 1890 -330 0 0 {name=M23
 L=0.3u
 W=1.7u
