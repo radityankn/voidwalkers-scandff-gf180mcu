@@ -1,0 +1,3 @@
+[console_scripts]
+charlib=charlib.characterizer.run:main
+
