@@ -45,9 +45,7 @@ The design will be fully static, as the frequency is still low enough to be hand
 ![Scan DFF Functional-Level Diagram](images/functional_diagram.png)
 
 Our team consists of 3 people, which will handle the design and layouting with following task division : 
-+ Flip Flop design and Layout : 
-    1. Aakarsh A
-    2. Ahmad Jabar Ilmi
++ Flip Flop design and Layout : Ahmad Jabar Ilmi
 + Multiplexer Design and Layout : Sarah Beatrix Sitorus 
 
 The workflow will proceed according to the proposed timeline, shown in figure below : 
