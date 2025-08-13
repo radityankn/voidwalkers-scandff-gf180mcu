@@ -2,9 +2,9 @@
 
 We are team VoidWalkers participating in Digital Track of SSCS Chipathon 2025. For our proposal, we would like to create a scan D Flip-Flop (Scan DFF), which hopefully enables digital designers to create digital designs with DFT capability in mind. 
 
-Proposal : https://docs.google.com/presentation/d/1PPs22g3QAaJXZ76OtD4wRJLnIo7fuem2/edit?slide=id.g36d74ebfab8_0_553#slide=id.g36d74ebfab8_0_553
+Proposal : [Team VoidWalkers SDFF Proposal](https://docs.google.com/presentation/d/1AF_vrYPLAI_O6S2Kj40k2A-3c9Rtu7K0/edit?slide=id.g36d74ebfab8_0_553#slide=id.g36d74ebfab8_0_553)
 
-Schematic Review : https://docs.google.com/presentation/d/1GyEIBBzt-7FBxvqLwse9bd2zhBqQ4Ye7/edit?slide=id.g37264e39492_100_47#slide=id.g37264e39492_100_47
+Schematic Review : [Team VoidWalkers SDFF Schematic Review](https://docs.google.com/presentation/d/1h36nSLaYSaX5CXgG3Rma9wVmSlDOISLQ6w9QRmRZ6Y4/edit?slide=id.g37264e39492_100_47#slide=id.g37264e39492_100_47)
 
 ### Background 
 
