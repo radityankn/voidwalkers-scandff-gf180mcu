@@ -12,13 +12,14 @@ settings:
 
     cell_defaults:
         models:
-            - sm141064.ngspice typical # https://raw.githubusercontent.com/fossi-foundation/globalfoundries-pdk-libs-gf180mcu_fd_pr/refs/heads/main/models/ngspice/sm141064.ngspice
-            - design.ngspice # https://raw.githubusercontent.com/fossi-foundation/globalfoundries-pdk-libs-gf180mcu_fd_pr/refs/heads/main/models/ngspice/design.ngspice
-        slews: [0.0706, 0.1903, 0.5123, 1.3794, 3.7140, 10] # https://github.com/stineje/globalfoundries-pdk-libs-gf180mcu_osu_sc/blob/main/gf180mcu_osu_sc_gp9t3v3/charlib.yml
-        loads: [0.0013, 0.0048, 0.0172, 0.0616, 0.2206, 0.7901] # https://github.com/stineje/globalfoundries-pdk-libs-gf180mcu_osu_sc/blob/main/gf180mcu_osu_sc_gp9t3v3/charlib.yml
+            - sm141064.ngspice typical # This syntax tells CharLib to use the '.lib file section' syntax for t>
+            - design.ngspice
+        slews: [0.0706, 0.1903, 0.5123, 1.3794, 3.7140, 10]
+        loads: [0.0013, 0.0048, 0.0172, 0.0616, 0.2206, 0.7901]
 cells:
     INV:
         netlist:    schematics/mux2x1/inv.spice
         inputs:     [IN]
         outputs:    [OUT]
         functions:  [OUT=!IN]
+

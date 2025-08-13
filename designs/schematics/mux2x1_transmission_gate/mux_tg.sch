@@ -23,8 +23,8 @@ N 160 60 160 90 {lab=gnd}
 N 160 60 200 60 {lab=gnd}
 N 200 60 200 200 {lab=gnd}
 C {symbols/nfet_03v3.sym} 160 110 3 0 {name=M1
-L=0.28u
-W=0.22u
+L=0.3u
+W=0.85u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -37,8 +37,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 160 -100 1 0 {name=M2
-L=0.28u
-W=0.22u
+L=0.3u
+W=1.7u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -53,7 +53,7 @@ spiceprefix=X
 C {iopin.sym} 210 -160 0 0 {name=p1 lab=vdd}
 C {iopin.sym} 200 200 0 0 {name=p2 lab=gnd
 }
-C {iopin.sym} 370 10 0 0 {name=p3 lab=out}
-C {iopin.sym} -50 0 2 0 {name=p4 lab=in}
-C {iopin.sym} -50 -150 2 0 {name=p5 lab=pfet_gate}
-C {iopin.sym} -50 150 2 0 {name=p6 lab=nfet_gate}
+C {opin.sym} 370 10 0 0 {name=p3 lab=out}
+C {ipin.sym} -50 0 2 0 {name=p4 lab=in}
+C {ipin.sym} -50 -150 2 0 {name=p5 lab=pfet_gate}
+C {ipin.sym} -50 150 2 0 {name=p6 lab=nfet_gate}

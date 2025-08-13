@@ -7,13 +7,13 @@ E {}
 B 2 80 -260 880 140 {flags=graph
 y1=0
 y2=3.4
-ypos1=0
-ypos2=3.4
+ypos1=-0.8373134
+ypos2=2.5626866
 divy=5
 subdivy=4
 unity=1
-x1=4.0687293e-07
-x2=5.2870469e-07
+x1=3.6081485e-07
+x2=7.1005081e-07
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -21,17 +21,13 @@ ylabmag=1.0
 node="clk
 d
 q
-probe[0]
-probe[1]
-probe[2]
-probe[3]
 rn"
-color="4 6 15 7 8 9 10 12"
+color="4 5 6 14"
 dataset=-1
 unitx=1
 logx=0
 logy=0
-legend=0
+legend=1
 digital=1
 autoload=0
 rainbow=1

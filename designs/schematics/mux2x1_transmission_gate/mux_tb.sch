@@ -2,13 +2,7 @@ v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
-S {.option
-save all
-
-.control
-tran 0 1u 
-.endc
-.end}
+S {}
 E {}
 B 2 -480 570 360 820 {flags=graph
 y1=-1.0757307
@@ -55,10 +49,7 @@ logy=0
 rawfile=$netlist_dir/test_result_mux.raw
 hilight_wave=0
 autoload=0}
-N 120 -130 120 -20 {lab=vdd}
 N 110 -130 120 -130 {lab=vdd}
-N 120 20 120 120 {lab=GND}
-N 120 -0 210 0 {lab=out}
 N -230 -60 -180 -60 {lab=data}
 N -230 -40 -180 -40 {lab=scan_data}
 N -230 -20 -180 -20 {lab=scan_enable}
@@ -71,6 +62,21 @@ N -230 80 -230 150 {lab=scan_enable}
 N -450 210 -450 240 {lab=GND}
 N 120 120 120 210 {lab=GND}
 N -450 210 120 210 {lab=GND}
+N 120 -130 120 -60 {lab=vdd}
+N 120 60 120 120 {lab=GND}
+N 120 -60 140 -60 {lab=vdd}
+N 140 -60 140 -0 {lab=vdd}
+N 120 -0 140 -0 {lab=vdd}
+N 120 -20 210 -20 {lab=out}
+N 210 -20 210 -0 {lab=out}
+N 120 -40 160 -40 {lab=GND}
+N 160 -40 160 20 {lab=GND}
+N 120 20 160 20 {lab=GND}
+N 120 20 160 20 {lab=GND}
+N 160 20 160 60 {lab=GND}
+N 120 60 160 60 {lab=GND}
+N 120 40 140 40 {lab=vdd}
+N 140 0 140 40 {lab=vdd}
 C {lab_pin.sym} 110 -130 0 0 {name=p1 sig_type=std_logic lab=vdd
 }
 C {lab_pin.sym} 210 0 0 1 {name=p3 sig_type=std_logic lab=out}
@@ -88,18 +94,19 @@ C {devices/code_shown.sym} 350 -190 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice ff
+.lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 360 -60 0 0 {name=s1 only_toplevel=false value="
-.temp 25
-
+C {code_shown.sym} 340 -70 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
 tran 0.1n 1u
-write test_result_mux.raw
+write mux_tb.raw
 plot out
 
 .endc
-.end
 "}
 C {schematics/mux2x1_transmission_gate/mux_toplevel.sym} -30 0 0 0 {name=x1}
+C {launcher.sym} -300 290 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/mux_tb.raw tran"
+}
