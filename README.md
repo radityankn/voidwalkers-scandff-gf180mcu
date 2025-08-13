@@ -10,6 +10,7 @@ Proposal : [Team VoidWalkers SDFF Proposal](https://docs.google.com/presentation
 
 Schematic Review : [Team VoidWalkers SDFF Schematic Review](https://docs.google.com/presentation/d/1h36nSLaYSaX5CXgG3Rma9wVmSlDOISLQ6w9QRmRZ6Y4/edit?slide=id.g37264e39492_100_47#slide=id.g37264e39492_100_47)
 
+Project Tracker: [TeamVoidWalkers Project Tracker](https://docs.google.com/spreadsheets/d/1j5DVouaqu3p_pqJHRvqstsoFSM28it2NvSHbgs7ZdGA/edit?usp=sharing)
 ### Background 
 
 Design for Testability (DFT) is an important design principle especially in VLSI design. DFT encourages a designer to include features for testing after manufacturing, so the functionality of the device can be verified before delivery to customers. This is important in VLSI design because of the delicate manufacturing process of the chips, making conventional testing very hard or even impossible to produce reliable result since the DUT (Device Under Test) are very small and not every elements is accessible from outside. 
