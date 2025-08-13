@@ -12,8 +12,8 @@ ypos2=2.72
 divy=5
 subdivy=4
 unity=1
-x1=8.266843e-07
-x2=1.0165229e-06
+x1=1.618365e-09
+x2=4.7399769e-07
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -90,14 +90,14 @@ C {lab_wire.sym} -10 -170 0 1 {name=p14 sig_type=std_logic lab=PROBE[3:0]}
 C {lab_wire.sym} -10 -190 0 1 {name=p15 sig_type=std_logic lab=QN}
 C {lab_wire.sym} -450 -190 0 1 {name=p16 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -450 -230 0 1 {name=p17 sig_type=std_logic lab=VDD}
-C {vsource.sym} -800 -10 0 0 {name=V5 value="PULSE(3.3 0 0n 1n 1n 100n 200n)" savecurrent=false
+C {vsource.sym} -800 -10 0 0 {name=V5 value="PULSE(0 3.3 0n 1n 1n 50n 100n)" savecurrent=false
 }
 C {lab_wire.sym} -800 -40 3 1 {name=p3 sig_type=std_logic lab=A}
 C {lab_wire.sym} -800 20 3 0 {name=p18 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -570 -400 3 1 {name=p19 sig_type=std_logic lab=B}
 C {lab_wire.sym} -570 -340 3 0 {name=p20 sig_type=std_logic lab=VSS}
 C {vsource.sym} -570 -370 0 0 {name=V6 value="PULSE(0 3.3 0n 1n 1n 100n 200n)"  savecurrent=false}
-C {vsource.sym} -820 -370 0 0 {name=V7 value="PULSE(0 0 0n 0.1n 0.1n 200n 400n)" savecurrent=false}
+C {vsource.sym} -820 -370 0 0 {name=V7 value="PULSE(0 3.3 0n 0.1n 0.1n 200n 400n)" savecurrent=false}
 C {lab_wire.sym} -820 -340 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -820 -400 3 1 {name=p22 sig_type=std_logic lab=S}
 C {lab_wire.sym} -750 -230 0 0 {name=p23 sig_type=std_logic lab=A}

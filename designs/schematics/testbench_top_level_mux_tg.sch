@@ -101,11 +101,11 @@ C {vsource.sym} -570 -370 0 0 {name=V6 value="PULSE(0 3.3 0n 0.1n 0.1n 100n 200n
 C {vsource.sym} -820 -370 0 0 {name=V7 value="PULSE(0 3.3 0n 0.1n 0.1n 200n 400n)" savecurrent=false}
 C {lab_wire.sym} -820 -340 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -820 -400 3 1 {name=p22 sig_type=std_logic lab=S}
-C {lab_wire.sym} -750 -230 0 0 {name=p23 sig_type=std_logic lab=A}
-C {lab_wire.sym} -750 -210 0 0 {name=p25 sig_type=std_logic lab=B}
-C {lab_wire.sym} -750 -190 0 0 {name=p26 sig_type=std_logic lab=S}
+C {lab_wire.sym} -750 -190 0 0 {name=p23 sig_type=std_logic lab=A}
+C {lab_wire.sym} -750 -170 0 0 {name=p25 sig_type=std_logic lab=B}
+C {lab_wire.sym} -750 -150 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
 C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x3}
-C {schematics/mux2x1_transmission_gate/mux_toplevel.sym} -600 -170 0 0 {name=x4}
+C {schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sym} -600 -170 0 0 {name=x1}

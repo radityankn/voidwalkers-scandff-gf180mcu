@@ -54,5 +54,5 @@ spiceprefix=X
 C {iopin.sym} 210 -220 0 0 {name=p1 lab=vdd}
 C {iopin.sym} 200 200 0 0 {name=p2 lab=gnd
 }
-C {iopin.sym} 370 10 0 0 {name=p3 lab=out_inv}
-C {iopin.sym} -50 0 2 0 {name=p4 lab=in}
+C {opin.sym} 370 10 0 0 {name=p3 lab=out_inv}
+C {ipin.sym} -50 0 2 0 {name=p4 lab=in}

@@ -82,7 +82,7 @@ tran 1n 800n
 write mux_nand_tb.raw
 .endc
 "}
-C {devices/code_shown.sym} 130 -590 0 0 {name=MODELS1 only_toplevel=true
+C {devices/code_shown.sym} 140 -590 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
