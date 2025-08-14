@@ -1,0 +1,193 @@
+magic
+tech gf180mcuD
+magscale 1 2
+timestamp 1755194955
+<< checkpaint >>
+rect -412 116 500 140
+rect -412 92 700 116
+rect -412 68 900 92
+rect -412 44 1100 68
+rect -412 20 1300 44
+rect -412 -4 1500 20
+rect -412 -28 1700 -4
+rect -412 -52 1900 -28
+rect -412 -76 2100 -52
+rect -412 -100 2300 -76
+rect -412 -124 2500 -100
+rect -412 -136 2700 -124
+rect -412 -160 2800 -136
+rect -412 -172 3000 -160
+rect -412 -218 3100 -172
+rect -412 -230 3200 -218
+rect -412 -242 3300 -230
+rect -412 -812 3400 -242
+rect -312 -824 3400 -812
+rect -212 -836 3400 -824
+rect -112 -848 3400 -836
+rect -12 -860 3400 -848
+rect 88 -872 3400 -860
+rect 188 -884 3400 -872
+rect 288 -896 3400 -884
+rect 388 -908 3400 -896
+rect 488 -920 3400 -908
+rect 588 -932 3400 -920
+rect 688 -944 3400 -932
+rect 788 -956 3400 -944
+rect 888 -968 3400 -956
+rect 988 -980 3400 -968
+rect 1088 -992 3400 -980
+rect 1188 -1004 3400 -992
+rect 1288 -1016 3400 -1004
+rect 1388 -1028 3400 -1016
+rect 1488 -1040 3400 -1028
+rect 1588 -1052 3400 -1040
+rect 1688 -1064 3400 -1052
+rect 1788 -1076 3400 -1064
+rect 1888 -1088 3400 -1076
+rect 1988 -1100 3400 -1088
+rect 2088 -1112 3400 -1100
+rect 2188 -1124 3400 -1112
+rect 2288 -1136 3400 -1124
+rect 2388 -1148 3400 -1136
+rect 2488 -1160 3400 -1148
+<< metal1 >>
+rect 0 0 40 40
+rect 0 -80 40 -40
+rect 0 -160 40 -120
+rect 0 -240 40 -200
+rect 0 -320 40 -280
+rect 0 -400 40 -360
+use pfet_03v3_FU43A4  M1
+timestamp 0
+transform 1 0 44 0 1 -336
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M2
+timestamp 0
+transform 1 0 144 0 1 -365
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M3
+timestamp 0
+transform 1 0 244 0 1 -360
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M4
+timestamp 0
+transform 1 0 344 0 1 -389
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M5
+timestamp 0
+transform 1 0 444 0 1 -384
+box -56 -76 56 76
+use pfet_03v3_FU43A4  M6
+timestamp 0
+transform 1 0 2244 0 1 -600
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M7
+timestamp 0
+transform 1 0 2844 0 1 -689
+box -56 -59 56 59
+use nfet_03v3_5D4WUM  M8
+timestamp 0
+transform 1 0 544 0 1 -413
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M9
+timestamp 0
+transform 1 0 1044 0 1 -456
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M10
+timestamp 0
+transform 1 0 1144 0 1 -485
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M11
+timestamp 0
+transform 1 0 1244 0 1 -480
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M12
+timestamp 0
+transform 1 0 1344 0 1 -509
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M13
+timestamp 0
+transform 1 0 644 0 1 -408
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M14
+timestamp 0
+transform 1 0 744 0 1 -437
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M15
+timestamp 0
+transform 1 0 844 0 1 -432
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M16
+timestamp 0
+transform 1 0 944 0 1 -461
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M17
+timestamp 0
+transform 1 0 2544 0 1 -636
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M18
+timestamp 0
+transform 1 0 2944 0 1 -701
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M19
+timestamp 0
+transform 1 0 1444 0 1 -504
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M20
+timestamp 0
+transform 1 0 1544 0 1 -533
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M21
+timestamp 0
+transform 1 0 1644 0 1 -528
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M22
+timestamp 0
+transform 1 0 1744 0 1 -557
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M23
+timestamp 0
+transform 1 0 1844 0 1 -552
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M24
+timestamp 0
+transform 1 0 1944 0 1 -581
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M25
+timestamp 0
+transform 1 0 2044 0 1 -576
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M26
+timestamp 0
+transform 1 0 2144 0 1 -605
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M27
+timestamp 0
+transform 1 0 2344 0 1 -612
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M28
+timestamp 0
+transform 1 0 2444 0 1 -641
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M29
+timestamp 0
+transform 1 0 2644 0 1 -648
+box -56 -76 56 76
+use nfet_03v3_5D4WUM  M30
+timestamp 0
+transform 1 0 2744 0 1 -677
+box -56 -59 56 59
+<< labels >>
+flabel metal1 0 0 40 40 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -80 40 -40 0 FreeSans 256 0 0 0 VSS
+port 1 nsew
+flabel metal1 0 -160 40 -120 0 FreeSans 256 0 0 0 Q
+port 2 nsew
+flabel metal1 0 -240 40 -200 0 FreeSans 256 0 0 0 D
+port 3 nsew
+flabel metal1 0 -320 40 -280 0 FreeSans 256 0 0 0 CLK
+port 4 nsew
+flabel metal1 0 -400 40 -360 0 FreeSans 256 0 0 0 RN
+port 5 nsew
+<< end >>

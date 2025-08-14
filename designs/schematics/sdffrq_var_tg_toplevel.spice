@@ -1,0 +1,77 @@
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/sdffrq_var_tg_toplevel.sch
+.subckt sdffrq_var_tg_toplevel VDD A Q B S CLK RN VSS
+*.PININFO A:I B:I S:I VDD:B VSS:B Q:O RN:I CLK:I
+x2 VDD VSS Q net1 CLK RN d_flip_flop_r
+x1 VDD A net1 B VSS S mux_toplevel_ilmi
+.ends
+
+* expanding   symbol:  schematics/d_flip_flop/d_flip_flop_r.sym # of pins=6
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sch
+.subckt d_flip_flop_r VDD VSS Q D CLK RN
+*.PININFO D:I VDD:I VSS:I Q:O CLK:I RN:I
+M1 net1 D VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M2 PROBE[0] CLK_INV net2 VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M3 PROBE[0] CLK net1 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M4 net2 D VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M5 CLK_INV CLK VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M8 CLK_INV CLK VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M13 net3 PROBE[1] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M14 PROBE[0] CLK net4 VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M15 PROBE[0] CLK_INV net3 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M16 net4 PROBE[1] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M9 net5 PROBE[1] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M10 PROBE[2] CLK net6 VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M11 PROBE[2] CLK_INV net5 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M12 net6 PROBE[1] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M19 net7 PROBE[3] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M20 PROBE[2] CLK_INV net8 VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M21 PROBE[2] CLK net7 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M22 net8 PROBE[3] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M23 QN PROBE[3] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M24 QN PROBE[3] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M25 Q QN VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M26 Q QN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M6 net9 PROBE[0] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M27 PROBE[1] RN net9 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M28 PROBE[1] PROBE[0] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M17 net10 PROBE[2] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M29 PROBE[3] RN net10 VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M30 PROBE[3] PROBE[2] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M7 PROBE[1] RN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M18 PROBE[3] RN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sym # of pins=6
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sch
+.subckt mux_toplevel_ilmi VDD A OUT B VSS S
+*.PININFO VDD:B OUT:O A:I B:I S:I VSS:B
+x2 VDD S A TG_OUT S_INV VSS mux_tg
+x3 VDD S_INV B TG_OUT S VSS mux_tg
+x1 VDD S S_INV VSS inv
+x4 VDD TG_OUT net1 VSS inv
+x5 VDD net1 OUT VSS inv
+.ends
+
+
+* expanding   symbol:  schematics/mux2x1_transmission_gate/mux_tg.sym # of pins=6
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1_transmission_gate/mux_tg.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1_transmission_gate/mux_tg.sch
+.subckt mux_tg vdd pfet_gate in out nfet_gate gnd
+*.PININFO vdd:B gnd:B out:O in:I pfet_gate:I nfet_gate:I
+M1 in nfet_gate out gnd nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+M2 in pfet_gate out vdd pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  schematics/mux2x1/inv.sym # of pins=4
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sch
+.subckt inv VDD IN OUT VSS
+*.PININFO IN:I OUT:O VDD:B VSS:B
+M2 OUT IN VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
+M1 OUT IN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
+.ends
+

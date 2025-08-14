@@ -1,0 +1,31 @@
+magic
+tech gf180mcuD
+magscale 1 2
+timestamp 1755194956
+<< checkpaint >>
+rect -412 254 500 300
+rect -412 -652 600 254
+rect -312 -664 600 -652
+<< metal1 >>
+rect 0 0 40 40
+rect 0 -80 40 -40
+rect 0 -160 40 -120
+rect 0 -240 40 -200
+use nfet_03v3_5D4WUM  M1
+timestamp 0
+transform 1 0 144 0 1 -205
+box -56 -59 56 59
+use pfet_03v3_FU43A4  M2
+timestamp 0
+transform 1 0 44 0 1 -176
+box -56 -76 56 76
+<< labels >>
+flabel metal1 0 0 40 40 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -80 40 -40 0 FreeSans 256 0 0 0 IN
+port 1 nsew
+flabel metal1 0 -160 40 -120 0 FreeSans 256 0 0 0 OUT
+port 2 nsew
+flabel metal1 0 -240 40 -200 0 FreeSans 256 0 0 0 VSS
+port 3 nsew
+<< end >>
