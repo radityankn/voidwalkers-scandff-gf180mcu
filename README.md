@@ -2,6 +2,15 @@
 
 We are team VoidWalkers participating in Digital Track of SSCS Chipathon 2025. For our proposal, we would like to create a scan D Flip-Flop (Scan DFF), which hopefully enables digital designers to create digital designs with DFT capability in mind. 
 
+List of Team Members:
+1. Ahmad Jabar Ilmi (Aji Ilmi) 
+2. Sarah Beatrix Sitorus
+
+Proposal : [Team VoidWalkers SDFF Proposal](https://docs.google.com/presentation/d/1AF_vrYPLAI_O6S2Kj40k2A-3c9Rtu7K0/edit?slide=id.g36d74ebfab8_0_553#slide=id.g36d74ebfab8_0_553)
+
+Schematic Review : [Team VoidWalkers SDFF Schematic Review](https://docs.google.com/presentation/d/1h36nSLaYSaX5CXgG3Rma9wVmSlDOISLQ6w9QRmRZ6Y4/edit?slide=id.g37264e39492_100_47#slide=id.g37264e39492_100_47)
+
+Project Tracker: [TeamVoidWalkers Project Tracker](https://docs.google.com/spreadsheets/d/1j5DVouaqu3p_pqJHRvqstsoFSM28it2NvSHbgs7ZdGA/edit?usp=sharing)
 ### Background 
 
 Design for Testability (DFT) is an important design principle especially in VLSI design. DFT encourages a designer to include features for testing after manufacturing, so the functionality of the device can be verified before delivery to customers. This is important in VLSI design because of the delicate manufacturing process of the chips, making conventional testing very hard or even impossible to produce reliable result since the DUT (Device Under Test) are very small and not every elements is accessible from outside. 
@@ -36,9 +45,7 @@ The design will be fully static, as the frequency is still low enough to be hand
 ![Scan DFF Functional-Level Diagram](images/functional_diagram.png)
 
 Our team consists of 3 people, which will handle the design and layouting with following task division : 
-+ Flip Flop design and Layout : 
-    1. Aakarsh A
-    2. Ahmad Jabar Ilmi
++ Flip Flop design and Layout : Ahmad Jabar Ilmi
 + Multiplexer Design and Layout : Sarah Beatrix Sitorus 
 
 The workflow will proceed according to the proposed timeline, shown in figure below : 
