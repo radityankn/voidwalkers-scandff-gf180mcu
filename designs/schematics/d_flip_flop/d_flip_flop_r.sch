@@ -521,17 +521,11 @@ C {lab_wire.sym} 2220 -190 0 1 {name=p65 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2140 -130 1 1 {name=p66 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2140 -390 3 1 {name=p67 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2220 -260 0 1 {name=p68 sig_type=std_logic lab=Q}
-C {opin.sym} 300 -750 0 0 {name=p69 lab=CLK_INV}
-C {lab_wire.sym} 300 -750 0 0 {name=p70 sig_type=std_logic lab=CLK_INV}
 C {lab_wire.sym} 2040 -290 0 1 {name=p71 sig_type=std_logic lab=QN}
-C {opin.sym} 300 -690 0 0 {name=p72 lab=QN}
-C {lab_wire.sym} 300 -690 0 0 {name=p73 sig_type=std_logic lab=QN}
 C {lab_wire.sym} 480 -460 0 1 {name=p74 sig_type=std_logic lab=PROBE[0]}
 C {lab_wire.sym} 860 -330 0 1 {name=p75 sig_type=std_logic lab=PROBE[1]}
 C {lab_wire.sym} 1360 -480 0 1 {name=p76 sig_type=std_logic lab=PROBE[2]}
 C {lab_wire.sym} 1740 -340 0 1 {name=p77 sig_type=std_logic lab=PROBE[3]}
-C {opin.sym} 300 -660 0 0 {name=p78 lab=PROBE[3:0]}
-C {lab_wire.sym} 300 -660 0 0 {name=p79 sig_type=std_logic lab=PROBE[3:0]}
 C {symbols/pfet_03v3.sym} 710 -380 0 0 {name=M6
 L=0.3u
 W=1.7u
