@@ -7,7 +7,7 @@ library (test_GF180) {
   time_unit : "1ns";
   voltage_unit : "1V";
   current_unit : "1uA";
-  pulling_resistance_unit : "1kOhm";
+  pulling_resistance_unit : "1Ohm";
   leakage_power_unit : "1nW";
   capacitive_load_unit : "1pF";
 

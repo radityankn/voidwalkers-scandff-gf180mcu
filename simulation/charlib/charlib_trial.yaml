@@ -15,15 +15,15 @@ settings:
             voltage:    0
     cell_defaults:
         models:
-            - /mnt/Backyard/Silicons/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical # This syntax tells CharLib to use the '.lib file section' syntax for this model
-            - /mnt/Backyard/Silicons/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+            - ../ngspice/sm141064.ngspice typical # This syntax tells CharLib to use the '.lib file section' syntax for this model
+            - ../ngspice/design.ngspice
         slews: [0.015, 0.04, 0.08, 0.2, 0.4]
         loads: [0.06, 0.18, 0.42, 0.6, 1.2]
         setup_time_range: [0.001, 1]
         hold_time_range: [0.001, 1]
 cells:
     SDFFRQ:
-        netlist:    ./sdffrq_var_nand_toplevel.spice
+        netlist:    ../netlist/sdffrq_var_nand_toplevel.spice
         area:       100
         clock:      posedge CLK
         reset:      negedge R
