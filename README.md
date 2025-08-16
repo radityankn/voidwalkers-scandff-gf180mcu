@@ -21,7 +21,7 @@ One implementation of DFT is making a testable elements to aid in verification p
 
 Scan DFF is essentially a regular DFF with a 2:1 multiplexer in its data port. This multiplexer is a selector between normal DFF operation and Scan DFF, which can be injected with arbitrary bits. The MUX has 2 inputs, Data in and Scan in, and select which one is to be passed based on the condition of Scan Enable pin. The block diagram is as follows : 
 
-![Scan DFF Diagram](docs/screenshots/scandff_diagram.png)
+![Scan DFF Diagram](docs/screenshots/scandff_digram.png)
 
 We intended to apply the standar cells of microcontroller, so it has to be fast and support 3.3V, though as long as the design is intended to be in 3.3V it is still perfectly usable. We also want this cell to support more fanout, so it can be used for more complex design without requiring additional buffers. This use case determines our specification listed in the table below : 
 
