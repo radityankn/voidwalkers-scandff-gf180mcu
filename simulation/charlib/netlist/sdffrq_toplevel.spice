@@ -1,33 +1,49 @@
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/sdffrq_var_nand_toplevel.sch
-**.subckt sdffrq_var_nand_toplevel VDD CLK_INV A Q B S QN PROBE[3],PROBE[2],PROBE[1],PROBE[0] CLK RN VSS
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/sdffrq_tg_toplevel/sdffrq_toplevel.sch
+**.subckt sdffrq_toplevel VDD A Q B S CLK RN VSS
 *.ipin A
 *.ipin B
 *.ipin S
-*.opin CLK_INV
 *.iopin VDD
 *.iopin VSS
 *.opin Q
-*.opin QN
-*.opin PROBE[3],PROBE[2],PROBE[1],PROBE[0]
 *.ipin RN
 *.ipin CLK
-x1 CLK_INV Q QN VDD VSS PROBE[3] PROBE[2] PROBE[1] PROBE[0] net1 CLK RN d_flip_flop_r
-x2 VDD A net1 B S VSS mux_nand
+x1 VDD A VSS net1 B S mux_toplevel
+x2 VDD VSS Q net1 CLK RN d_flip_flop_r
 **.ends
 
-* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym # of pins=9
-** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sym
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/d_flip_flop/d_flip_flop_r.sch
-.subckt d_flip_flop_r CLK_INV Q QN VDD VSS PROBE[3] PROBE[2] PROBE[1] PROBE[0] D CLK RN
+* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_toplevel.sym # of pins=10
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_toplevel.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_toplevel.sch
+.subckt mux_toplevel vdd data vss out scan_data se_in
+*.iopin vdd
+*.opin out
+*.ipin data
+*.ipin scan_data
+*.ipin se_in
+*.iopin vdd
+*.iopin vss
+*.iopin vss
+*.iopin vdd
+*.iopin vss
+x2 vdd net1 data net2 se_in vss mux_tg
+x1 vdd se_in net1 vss mux_inverter
+x3 vdd se_in scan_data net2 net1 vss mux_tg
+x4 vdd net2 net3 vss mux_inverter
+x5 vdd net3 out vss mux_inverter
+.ends
+
+
+* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/libs/d_flip_flop/d_flip_flop_r.sym # of pins=6
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/d_flip_flop/d_flip_flop_r.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/d_flip_flop/d_flip_flop_r.sch
+.subckt d_flip_flop_r VDD VSS Q D CLK RN
 *.ipin D
 *.ipin VDD
 *.ipin VSS
 *.opin Q
 *.ipin CLK
 *.ipin RN
-*.opin CLK_INV
-*.opin QN
-*.opin PROBE[3],PROBE[2],PROBE[1],PROBE[0]
 XM1 net1 D VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM2 PROBE[0] CLK_INV net2 VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
@@ -58,9 +74,9 @@ XM12 net6 PROBE[1] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/n
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM19 net7 PROBE[3] VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM20 PROBE[2] CLK net8 VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM20 PROBE[2] CLK_INV net8 VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM21 PROBE[2] CLK_INV net7 VDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM21 PROBE[2] CLK net7 VDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 XM22 net8 PROBE[3] VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
@@ -91,54 +107,34 @@ XM18 PROBE[3] RN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf 
 .ends
 
 
-* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym # of pins=6
-** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sym
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/mux_nand.sch
-.subckt mux_nand vcc A y B S gnd
-*.ipin S
-*.ipin A
-*.ipin B
-*.opin y
-*.iopin vcc
+* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_tg.sym # of pins=6
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_tg.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_tg.sch
+.subckt mux_tg vdd pfet_gate in out nfet_gate gnd
+*.iopin vdd
 *.iopin gnd
-x4 vcc S net1 gnd inv
-x1 vcc net2 A net1 gnd nand
-x2 vcc net3 B S gnd nand
-x3 vcc y net2 net3 gnd nand
-.ends
-
-
-* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sym # of pins=4
-** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sym
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sch
-.subckt inv vcc in out gnd
-*.ipin in
 *.opin out
-*.iopin vcc
-*.iopin gnd
-XM2 out in vcc vcc pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+*.ipin in
+*.ipin pfet_gate
+*.ipin nfet_gate
+XM1 in nfet_gate out gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM1 out in gnd gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM2 in pfet_gate out vdd pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 
 
-* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym # of pins=5
-** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sym
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/nand.sch
-.subckt nand vcc OUT A B gnd
-*.ipin A
-*.ipin B
-*.opin OUT
-*.iopin vcc
+* expanding   symbol:  voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sym # of pins=4
+** sym_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sym
+** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sch
+.subckt mux_inverter vdd in out_inv gnd
+*.iopin vdd
 *.iopin gnd
-XM1 OUT B net1 gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+*.opin out_inv
+*.ipin in
+XM1 out_inv in gnd gnd nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM2 net1 A gnd gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM3 OUT A vcc vcc pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
-XM4 OUT B vcc vcc pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
+XM2 out_inv in vdd vdd pfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
 .ends
 

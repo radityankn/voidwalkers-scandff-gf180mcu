@@ -6,14 +6,14 @@ S {}
 E {}
 B 2 -480 570 360 820 {flags=graph
 y1=-1.0757307
-y2=3.9009094
+y2=3.9009095
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.1683696e-07
-x2=9.9023239e-07
+x1=2.5120011e-09
+x2=4.9176829e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,8 +24,9 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/test_result_mux.raw
-hilight_wave=0}
+rawfile=$netlist_dir/mux_tb.raw
+hilight_wave=0
+sim_type=tran}
 B 2 -480 320 360 570 {flags=graph
 y1=-1.0106848
 y2=3.9659554
@@ -34,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.1683696e-07
-x2=9.9023239e-07
+x1=2.5120011e-09
+x2=4.9176829e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -46,9 +47,10 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/test_result_mux.raw
+rawfile=$netlist_dir/mux_tb.raw
 hilight_wave=0
-autoload=0}
+autoload=0
+sim_type=tran}
 N 110 -130 120 -130 {lab=vdd}
 N -230 -60 -180 -60 {lab=data}
 N -230 -40 -180 -40 {lab=scan_data}
@@ -65,18 +67,16 @@ N -450 210 120 210 {lab=GND}
 N 120 -130 120 -60 {lab=vdd}
 N 120 60 120 120 {lab=GND}
 N 120 -60 140 -60 {lab=vdd}
-N 140 -60 140 -0 {lab=vdd}
-N 120 -0 140 -0 {lab=vdd}
-N 120 -20 210 -20 {lab=out}
-N 210 -20 210 -0 {lab=out}
-N 120 -40 160 -40 {lab=GND}
-N 160 -40 160 20 {lab=GND}
 N 120 20 160 20 {lab=GND}
 N 120 20 160 20 {lab=GND}
 N 160 20 160 60 {lab=GND}
 N 120 60 160 60 {lab=GND}
-N 120 40 140 40 {lab=vdd}
-N 140 0 140 40 {lab=vdd}
+N 120 40 160 40 {lab=GND}
+N 120 -40 140 -40 {lab=vdd}
+N 120 -20 140 -20 {lab=vdd}
+N 140 -60 140 -20 {lab=vdd}
+N 120 0 210 -0 {lab=out}
+N -540 210 -450 210 {lab=GND}
 C {lab_pin.sym} 110 -130 0 0 {name=p1 sig_type=std_logic lab=vdd
 }
 C {lab_pin.sym} 210 0 0 1 {name=p3 sig_type=std_logic lab=out}
@@ -105,8 +105,10 @@ plot out
 
 .endc
 "}
-C {schematics/mux2x1_transmission_gate/mux_toplevel.sym} -30 0 0 0 {name=x1}
-C {launcher.sym} -300 290 0 0 {name=h5
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_toplevel.sym} -30 0 0 0 {name=x1}
+C {launcher.sym} -300 300 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/mux_tb.raw tran"
 }
+C {vsource.sym} -540 180 0 0 {name=V4 value=3.3 savecurrent=false}
+C {lab_pin.sym} -540 150 0 0 {name=p2 sig_type=std_logic lab=vdd}

@@ -24,14 +24,11 @@ N -450 -170 -400 -170 {lab=VSS}
 C {ipin.sym} -750 -230 0 0 {name=p2 lab=A}
 C {ipin.sym} -750 -210 0 0 {name=p3 lab=B}
 C {ipin.sym} -750 -190 0 0 {name=p7 lab=S}
-C {opin.sym} -20 -230 0 0 {name=p8 lab=CLK_INV
+C {opin.sym} -20 -230 0 0 {name=p8 lab=Q
 }
 C {iopin.sym} -440 -280 0 0 {name=p9 lab=VDD}
 C {iopin.sym} -440 -80 0 0 {name=p10 lab=VSS}
-C {opin.sym} -20 -210 0 0 {name=p11 lab=Q}
-C {opin.sym} -20 -190 0 0 {name=p18 lab=QN}
-C {opin.sym} -20 -170 0 0 {name=p19 lab=PROBE[3:0]}
 C {ipin.sym} -330 -150 0 0 {name=p6 lab=RN}
 C {ipin.sym} -330 -170 0 0 {name=p13 lab=CLK}
-C {schematics/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
-C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1/mux_nand.sym} -600 -210 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/libs/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}

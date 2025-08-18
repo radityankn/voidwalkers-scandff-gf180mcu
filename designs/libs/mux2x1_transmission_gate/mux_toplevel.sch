@@ -25,7 +25,7 @@ N -410 -80 100 -80 {lab=scan_data}
 N -410 -230 100 -230 {lab=data}
 N -410 120 -360 120 {lab=se_in}
 N 430 -150 430 -130 {lab=vdd}
-N 530 -160 580 -160 {lab=out}
+N 530 -160 580 -160 {lab=#net2}
 N -60 120 20 120 {lab=#net1}
 N 20 110 20 120 {lab=#net1}
 N -60 150 -40 150 {lab=vss}
@@ -35,17 +35,29 @@ N -380 10 -380 120 {lab=se_in}
 N -380 10 40 10 {lab=se_in}
 N 40 -60 40 10 {lab=se_in}
 N 430 -40 430 -30 {lab=vss}
-N 400 -210 530 -210 {lab=out}
-N 400 -60 530 -60 {lab=out}
-N 530 -210 530 -60 {lab=out}
+N 400 -210 530 -210 {lab=#net2}
+N 400 -60 530 -60 {lab=#net2}
+N 530 -210 530 -60 {lab=#net2}
 N 400 -130 400 -80 {lab=vdd}
 N 400 -190 400 -180 {lab=vss}
 N 400 -280 400 -230 {lab=vdd}
 N -360 100 -360 120 {lab=se_in}
 N -60 90 -60 100 {lab=vdd}
 N -60 140 -60 150 {lab=vss}
+N 880 -140 920 -140 {lab=#net3}
+N 920 -160 920 -140 {lab=#net3}
+N 920 -160 940 -160 {lab=#net3}
+N 1240 -140 1260 -140 {lab=out}
+N 440 -280 880 -280 {lab=vdd}
+N 880 -280 880 -160 {lab=vdd}
+N 880 -280 1240 -280 {lab=vdd}
+N 1240 -280 1240 -160 {lab=vdd}
+N 430 -40 880 -40 {lab=vss}
+N 880 -120 880 -40 {lab=vss}
+N 1240 -120 1240 -40 {lab=vss}
+N 880 -40 1240 -40 {lab=vss}
 C {iopin.sym} 440 -310 0 0 {name=p1 lab=vdd}
-C {opin.sym} 580 -160 0 0 {name=p5 lab=out}
+C {opin.sym} 1260 -140 0 0 {name=p5 lab=out}
 C {ipin.sym} -410 -230 0 0 {name=p6 lab=data}
 C {ipin.sym} -410 -80 0 0 {name=p7 lab=scan_data}
 C {ipin.sym} -410 120 0 0 {name=p8 lab=se_in}
@@ -54,6 +66,8 @@ C {iopin.sym} 430 10 0 0 {name=p4 lab=vss}
 C {iopin.sym} -40 210 0 0 {name=p9 lab=vss}
 C {iopin.sym} -40 40 0 0 {name=p10 lab=vdd}
 C {iopin.sym} 430 -170 0 0 {name=p11 lab=vss}
-C {schematics/mux2x1_transmission_gate/mux_tg.sym} 250 -210 0 0 {name=x2}
-C {schematics/mux2x1_transmission_gate/mux_tg.sym} 250 -60 0 0 {name=x3}
-C {schematics/mux2x1_transmission_gate/mux_ctrl_logic.sym} -210 120 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_tg.sym} 250 -210 0 0 {name=x2}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sym} -210 120 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_tg.sym} 250 -60 0 0 {name=x3}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sym} 730 -140 0 0 {name=x4}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_inverter.sym} 1090 -140 0 0 {name=x5}
