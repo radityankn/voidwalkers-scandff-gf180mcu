@@ -33,5 +33,5 @@ C {lab_wire.sym} -450 -280 0 0 {name=p14 sig_type=std_logic lab=VDD
 }
 C {lab_wire.sym} -450 -80 0 0 {name=p15 sig_type=std_logic lab=VSS
 }
-C {mux2x1_transmission_gate/mux_toplevel_ilmi.sym} -600 -210 0 0 {name=x3}
 C {d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}
+C {mux_2x1.sym} -600 -210 0 0 {name=x2}

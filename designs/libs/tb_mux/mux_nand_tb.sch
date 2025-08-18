@@ -95,4 +95,4 @@ pressed to load/unload waveforms in graph."
 tclcommand="
 xschem raw_read $netlist_dir/mux_nand_tb.raw tran"
 }
-C {schematics/mux2x1/mux_nand.sym} 50 0 0 0 {name=x1}
+C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1/mux_nand.sym} 50 0 0 0 {name=x1}
