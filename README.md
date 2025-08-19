@@ -55,7 +55,7 @@ The workflow will proceed according to the proposed timeline, shown in figure be
 <img alt="Project Timeline" src="images/work_timeline.jpg" width=500px />
 
 Since the structure is quite different, the truth table is slightly diferent compared to the normal DFF. The truth table is as follows : 
-| D    | SI   | SE   | RN | CLK     | Q           |
+| D    | SI   | SE   | R | CLK     | Q           |
 |:----:|:----:|:----:|:--:|:-------:|:-----------:|
 | 1    | 0    | 0    | 1  | Rising  | 0           |
 | 1    | 1    | 0    | 1  | Rising  | 1           |
