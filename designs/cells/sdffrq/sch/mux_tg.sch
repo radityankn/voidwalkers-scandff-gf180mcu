@@ -9,11 +9,11 @@ N 240 -80 240 90 {lab=OUT}
 N 190 90 240 90 {lab=OUT}
 N 100 -80 130 -80 {lab=IN}
 N 100 -80 100 90 {lab=IN}
-N 160 130 160 150 {lab=nfet_gate}
+N 160 130 160 150 {lab=N_GATE}
 N 240 10 370 10 {lab=OUT}
 N 100 90 130 90 {lab=IN}
 N 160 -150 160 -120 {lab=P_GATE}
-N -50 150 160 150 {lab=nfet_gate}
+N -50 150 160 150 {lab=N_GATE}
 N -50 -150 160 -150 {lab=P_GATE}
 N -50 0 100 0 {lab=IN}
 N 160 -80 160 -50 {lab=VDD}
@@ -54,6 +54,6 @@ C {iopin.sym} 210 -160 0 0 {name=p1 lab=VDD}
 C {iopin.sym} 200 200 0 0 {name=p2 lab=VSS
 }
 C {opin.sym} 370 10 0 0 {name=p3 lab=OUT}
-C {ipin.sym} -50 0 2 0 {name=p4 lab=IN}
-C {ipin.sym} -50 -150 2 0 {name=p5 lab=P_GATE}
-C {ipin.sym} -50 150 2 0 {name=p6 lab=N_GATE}
+C {ipin.sym} -50 0 2 1 {name=p4 lab=IN}
+C {ipin.sym} -50 -150 2 1 {name=p5 lab=P_GATE}
+C {ipin.sym} -50 150 2 1 {name=p6 lab=N_GATE}

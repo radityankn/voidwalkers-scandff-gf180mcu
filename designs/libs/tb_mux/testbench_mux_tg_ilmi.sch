@@ -69,7 +69,6 @@ C {lab_wire.sym} 420 -910 0 0 {name=p17 sig_type=std_logic lab=A
 }
 C {lab_wire.sym} 900 -910 0 0 {name=p18 sig_type=std_logic lab=S}
 C {lab_wire.sym} 660 -910 0 0 {name=p19 sig_type=std_logic lab=B}
-C {voidwalkers-scandff-gf180mcu/designs/libs/mux2x1_transmission_gate/mux_toplevel_ilmi.sym} 450 -1120 0 0 {name=x1}
 C {vsource.sym} 300 -800 0 0 {name=V1 value=3.3 savecurrent=false}
 C {vsource.sym} 160 -800 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} 160 -770 0 0 {name=l2 lab=GND}
@@ -119,3 +118,4 @@ C {lab_wire.sym} 300 -1100 0 0 {name=p13 lab=S}
 C {lab_wire.sym} 600 -1120 0 1 {name=p14 lab=VSS}
 C {lab_wire.sym} 720 -1100 0 1 {name=p15 lab=OUT}
 C {title.sym} 180 -80 0 0 {name=l1 author="Ahmad Jabar Ilmi"}
+C {cells/sdffrq/sch/mux_2x1.sym} 450 -1120 0 0 {name=x1}

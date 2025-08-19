@@ -39,8 +39,8 @@ C {lab_wire.sym} 160 -90 0 1 {name=p31 sig_type=std_logic lab=TG_OUT}
 C {lab_wire.sym} -490 -10 0 0 {name=p32 sig_type=std_logic lab=TG_OUT}
 C {lab_wire.sym} -610 30 0 0 {name=p33 sig_type=std_logic lab=OUT}
 C {lab_wire.sym} 110 30 0 1 {name=p34 sig_type=std_logic lab=OUT}
-C {mux2x1/inv.sym} -360 -170 0 0 {name=x6}
-C {mux2x1/inv.sym} -340 10 0 0 {name=x1}
-C {mux2x1_transmission_gate/mux_tg.sym} 10 -240 0 0 {name=x4}
-C {mux2x1_transmission_gate/mux_tg.sym} 10 -90 0 0 {name=x2}
-C {mux2x1/inv.sym} -40 30 0 0 {name=x3}
+C {libs/mux2x1/inv.sym} -360 -170 0 0 {name=x1}
+C {libs/mux2x1/inv.sym} -340 10 0 0 {name=x2}
+C {libs/mux2x1/inv.sym} -40 30 0 0 {name=x3}
+C {libs/mux2x1_transmission_gate/mux_tg.sym} 10 -240 0 0 {name=x4}
+C {libs/mux2x1_transmission_gate/mux_tg.sym} 10 -90 0 0 {name=x5}

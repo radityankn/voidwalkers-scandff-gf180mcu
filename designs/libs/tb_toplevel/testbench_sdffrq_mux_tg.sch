@@ -12,8 +12,8 @@ ypos2=3.4
 divy=5
 subdivy=4
 unity=1
-x1=1.7949708e-07
-x2=3.1644444e-07
+x1=1.1860602e-06
+x2=1.3230079e-06
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -74,7 +74,7 @@ C {lab_wire.sym} -270 -30 3 1 {name=p11 sig_type=std_logic lab=VSS}
 C {gnd.sym} -270 30 0 1 {name=l1 lab=GND}
 C {lab_wire.sym} -10 -190 0 1 {name=p12 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -330 -150 0 0 {name=p5 sig_type=std_logic lab=RN}
-C {devices/launcher.sym} 195 -295 0 0 {name=h1
+C {devices/launcher.sym} 205 -295 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
 tclcommand="
@@ -96,4 +96,4 @@ C {lab_wire.sym} -330 -190 0 0 {name=p26 sig_type=std_logic lab=S}
 C {vsource.sym} -290 -370 0 0 {name=V2 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -290 -400 3 1 {name=p2 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -290 -340 3 0 {name=p8 sig_type=std_logic lab=VSS}
-C {voidwalkers-scandff-gf180mcu/designs/libs/sdffrq_toplevel/sdffrq_toplevel.sym} -170 -190 0 0 {name=x1}
+C {cells/sdffrnq/sch/sdffrnq.sym} -170 -190 0 0 {name=x1}

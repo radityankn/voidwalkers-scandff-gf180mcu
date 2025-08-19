@@ -14,7 +14,7 @@ C {ipin.sym} -750 -190 0 0 {name=p7 lab=SE}
 C {iopin.sym} -440 -280 0 0 {name=p9 lab=VDD}
 C {iopin.sym} -440 -80 0 0 {name=p10 lab=VSS}
 C {opin.sym} -20 -230 0 0 {name=p11 lab=Q}
-C {ipin.sym} -320 -150 0 0 {name=p6 lab=R}
+C {ipin.sym} -320 -150 0 0 {name=p6 lab=RN}
 C {ipin.sym} -320 -170 0 0 {name=p13 lab=CLK}
 C {lab_wire.sym} -450 -230 0 1 {name=p1 sig_type=std_logic lab=VDD
 }

@@ -1,0 +1,13 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1755195943
+use nfet_03v3_FTUVLQ  nfet_03v3_FTUVLQ_0
+timestamp 1755195943
+transform -1 0 2618 0 1 -177
+box -2558 -153 2558 153
+use pfet_03v3_6DGS6C  pfet_03v3_6DGS6C_0
+timestamp 1755195943
+transform 1 0 2620 0 1 300
+box -2620 -300 2620 300
+<< end >>

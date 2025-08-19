@@ -12,8 +12,8 @@ ypos2=2.5626866
 divy=5
 subdivy=4
 unity=1
-x1=3.6081485e-07
-x2=7.1005081e-07
+x1=1.1634965e-07
+x2=4.6558561e-07
 divx=5
 subdivx=4
 xlabmag=1.0
@@ -38,10 +38,7 @@ N -300 -70 -300 -50 {lab=D}
 N -300 10 -300 40 {lab=VSS}
 N -480 -250 -480 -230 {lab=VDD}
 N -480 -170 -480 -140 {lab=VSS}
-N -30 -210 -10 -210 {lab=Q}
-N -30 -230 -10 -230 {lab=CLK_INV}
-N -30 -190 -10 -190 {lab=QN}
-N -30 -170 -10 -170 {lab=PROBE[3:0]}
+N -30 -230 -10 -230 {lab=Q}
 N -800 -70 -800 -50 {lab=RN}
 N -800 10 -800 40 {lab=VSS}
 C {vsource.sym} -550 -10 0 0 {name=V1 value="PULSE(0 3.3 0n 0.1n 0.1n 5n 10n)" savecurrent=false}
@@ -49,7 +46,6 @@ C {lab_wire.sym} -550 -60 3 1 {name=p24 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} -330 -230 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} -330 -190 0 0 {name=p3 sig_type=std_logic lab=D}
 C {lab_wire.sym} -330 -170 0 0 {name=p4 sig_type=std_logic lab=CLK}
-C {lab_wire.sym} -10 -210 0 1 {name=p6 sig_type=std_logic lab=Q}
 C {vsource.sym} -300 -20 0 0 {name=V2 value="PULSE(0 3.3 0n 0.1n 0.1n 50n 100n)" savecurrent=false}
 C {lab_wire.sym} -300 -70 3 1 {name=p8 sig_type=std_logic lab=D}
 C {vsource.sym} -480 -200 0 0 {name=V3 value=3.3 savecurrent=false}
@@ -86,10 +82,8 @@ pressed to load/unload waveforms in graph."
 tclcommand="
 xschem raw_read $netlist_dir/testbench_d_flip_flop_r.raw tran"
 }
-C {lab_wire.sym} -10 -230 0 1 {name=p13 sig_type=std_logic lab=CLK_INV}
-C {lab_wire.sym} -10 -170 0 1 {name=p14 sig_type=std_logic lab=PROBE[3:0]}
-C {lab_wire.sym} -10 -190 0 1 {name=p15 sig_type=std_logic lab=QN}
+C {lab_wire.sym} -10 -230 0 1 {name=p13 sig_type=std_logic lab=Q}
 C {vsource.sym} -800 -20 0 0 {name=V5 value="PWL(0n 0V 500n 0V 500.1n 3.3V)" savecurrent=false}
 C {lab_wire.sym} -800 -70 3 1 {name=p16 sig_type=std_logic lab=RN}
 C {lab_wire.sym} -800 40 3 0 {name=p17 sig_type=std_logic lab=VSS}
-C {schematics/d_flip_flop/d_flip_flop_r.sym} -180 -190 0 0 {name=x1}
+C {libs/d_flip_flop/d_flip_flop_r.sym} -180 -190 0 0 {name=x1}
