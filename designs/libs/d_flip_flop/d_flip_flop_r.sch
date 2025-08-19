@@ -117,7 +117,7 @@ N 720 -130 800 -130 {lab=VSS}
 N 730 -430 730 -410 {lab=VDD}
 N 730 -440 730 -430 {lab=VDD}
 N 600 -380 690 -380 {lab=PROBE[0]}
-N 650 -320 690 -320 {lab=RN}
+N 650 -320 690 -320 {lab=R}
 N 570 -380 600 -380 {lab=PROBE[0]}
 N 290 -260 340 -260 {lab=PROBE[0]}
 N 340 -260 570 -260 {lab=PROBE[0]}
@@ -131,7 +131,7 @@ N 1600 -130 1680 -130 {lab=VSS}
 N 1610 -430 1610 -410 {lab=VDD}
 N 1610 -440 1610 -430 {lab=VDD}
 N 1480 -380 1570 -380 {lab=PROBE[2]}
-N 1530 -320 1570 -320 {lab=RN}
+N 1530 -320 1570 -320 {lab=R}
 N 1450 -380 1480 -380 {lab=PROBE[2]}
 N 1450 -380 1450 -190 {lab=PROBE[2]}
 N 1610 -100 1610 -70 {lab=VSS}
@@ -153,6 +153,15 @@ N 860 -210 960 -210 {lab=VSS}
 N 1610 -260 1740 -260 {lab=PROBE[3]}
 N 1380 -260 1440 -260 {lab=PROBE[2]}
 N 1440 -260 1450 -260 {lab=PROBE[2]}
+N 1080 -1140 1160 -1140 {lab=VDD}
+N 1080 -1000 1160 -1000 {lab=VSS}
+N 1080 -970 1080 -940 {lab=VSS}
+N 1080 -1190 1080 -1170 {lab=VDD}
+N 1080 -1200 1080 -1190 {lab=VDD}
+N 1080 -1110 1080 -1030 {lab=R}
+N 1040 -1140 1040 -1000 {lab=RN}
+N 1010 -1070 1040 -1070 {lab=RN}
+N 1080 -1070 1110 -1070 {lab=R}
 C {symbols/pfet_03v3.sym} 270 -380 0 0 {name=M1
 L=0.3u
 W=1.7u
@@ -572,7 +581,7 @@ C {lab_wire.sym} 810 -380 0 1 {name=p28 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 810 -320 0 1 {name=p29 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 800 -130 0 1 {name=p31 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 730 -440 3 1 {name=p81 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 650 -320 0 0 {name=p82 sig_type=std_logic lab=RN}
+C {lab_wire.sym} 650 -320 0 0 {name=p82 sig_type=std_logic lab=R}
 C {lab_wire.sym} 730 -70 1 1 {name=p83 sig_type=std_logic lab=VSS}
 C {symbols/pfet_03v3.sym} 1590 -380 0 0 {name=M17
 L=0.3u
@@ -620,7 +629,7 @@ C {lab_wire.sym} 1690 -380 0 1 {name=p42 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1690 -320 0 1 {name=p51 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1680 -130 0 1 {name=p85 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1610 -440 3 1 {name=p87 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1530 -320 0 0 {name=p88 sig_type=std_logic lab=RN}
+C {lab_wire.sym} 1530 -320 0 0 {name=p88 sig_type=std_logic lab=R}
 C {lab_wire.sym} 1610 -70 1 1 {name=p89 sig_type=std_logic lab=VSS}
 C {symbols/nfet_03v3.sym} 840 -210 0 0 {name=M7
 L=0.3u
@@ -637,7 +646,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_wire.sym} 860 -140 1 1 {name=p30 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 820 -210 0 0 {name=p41 sig_type=std_logic lab=RN}
+C {lab_wire.sym} 820 -210 0 0 {name=p41 sig_type=std_logic lab=R}
 C {symbols/nfet_03v3.sym} 1720 -200 0 0 {name=M18
 L=0.3u
 W=0.85u
@@ -652,7 +661,41 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_wire.sym} 1700 -200 0 0 {name=p52 sig_type=std_logic lab=RN}
+C {lab_wire.sym} 1700 -200 0 0 {name=p52 sig_type=std_logic lab=R}
 C {lab_wire.sym} 1740 -130 1 1 {name=p80 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1820 -200 0 1 {name=p84 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 960 -210 0 1 {name=p86 sig_type=std_logic lab=VSS}
+C {symbols/pfet_03v3.sym} 1060 -1140 0 0 {name=M31
+L=0.3u
+W=1.7u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 1060 -1000 0 0 {name=M32
+L=0.3u
+W=0.85u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {lab_wire.sym} 1160 -1140 0 1 {name=p69 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1160 -1000 0 1 {name=p70 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1080 -940 1 1 {name=p72 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1080 -1200 3 1 {name=p73 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1010 -1070 0 0 {name=p78 sig_type=std_logic lab=RN}
+C {lab_wire.sym} 1110 -1070 0 1 {name=p79 sig_type=std_logic lab=R}

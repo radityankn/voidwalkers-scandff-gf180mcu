@@ -20,8 +20,6 @@ C {iopin.sym} -440 -80 0 0 {name=p10 lab=VSS}
 C {opin.sym} -20 -230 0 0 {name=p11 lab=Q}
 C {ipin.sym} -330 -150 0 0 {name=p6 lab=RN}
 C {ipin.sym} -330 -170 0 0 {name=p13 lab=CLK}
-C {schematics/d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x2}
-C {schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sym} -600 -210 0 0 {name=x1}
 C {lab_wire.sym} -450 -230 0 1 {name=p1 sig_type=std_logic lab=VDD
 }
 C {lab_wire.sym} -450 -190 0 1 {name=p4 sig_type=std_logic lab=VSS
@@ -35,3 +33,5 @@ C {lab_wire.sym} -450 -280 0 0 {name=p14 sig_type=std_logic lab=VDD
 }
 C {lab_wire.sym} -450 -80 0 0 {name=p15 sig_type=std_logic lab=VSS
 }
+C {mux2x1_transmission_gate/mux_toplevel_ilmi.sym} -600 -210 0 0 {name=x3}
+C {d_flip_flop/d_flip_flop_r.sym} -170 -190 0 0 {name=x1}

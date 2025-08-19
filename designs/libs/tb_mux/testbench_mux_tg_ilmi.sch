@@ -4,11 +4,11 @@ K {}
 V {}
 S {}
 E {}
-B 2 -20 330 780 730 {flags=graph
+B 2 700 -650 1500 -250 {flags=graph
 y1=0
 y2=3.3
-ypos1=-0.1
-ypos2=1.9
+ypos1=0.1
+ypos2=2.1
 divy=5
 subdivy=4
 unity=1
@@ -22,46 +22,27 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color="4 5 6 7"
+color="4 5 6 7 4"
 node="a
 b
 s
-y"
+y
+x1.tg_out"
 digital=1
 legend=1}
-N -330 60 -160 60 {lab=B}
-N 140 60 197.5 60 {lab=y}
-N -330 30 -330 60 {lab=B}
-N -240 80 -240 120 {lab=S}
-N -200 40 -160 40 {lab=A}
-N -200 20 -200 40 {lab=A}
-N -260 -60 -260 40 {lab=A}
-N -380 -60 -260 -60 {lab=A}
-N -380 -60 -380 -50 {lab=A}
-N -680 10 -380 10 {lab=GND}
-N -240 80 -160 80 {lab=S}
-N -390 80 -240 80 {lab=S}
-N -390 80 -390 130 {lab=S}
-N -490 190 -390 190 {lab=GND}
-N -640 120 -640 190 {lab=GND}
-N -640 190 -490 190 {lab=GND}
-N -490 190 -490 230 {lab=GND}
-N -680 190 -640 190 {lab=GND}
-N -680 10 -680 190 {lab=GND}
-N -640 60 -330 60 {lab=B}
-N -260 40 -200 40 {lab=A}
-N 140 80 140 190 {lab=GND}
-N -390 190 140 190 {lab=GND}
-N 140 40 240 40 {lab=#net1}
-N 240 100 240 190 {lab=GND}
-N 140 190 240 190 {lab=GND}
-C {devices/code_shown.sym} 340 170 0 0 {name=MODELS1 only_toplevel=true
+N 300 -930 300 -910 {lab=VDD}
+N 300 -850 300 -830 {lab=#net1}
+N 420 -850 420 -830 {lab=#net2}
+N 660 -850 660 -830 {lab=#net3}
+N 900 -850 900 -830 {lab=#net4}
+N 600 -1100 660 -1100 {lab=#net5}
+C {devices/code_shown.sym} 90 -400 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} 460 -80 0 0 {name=NGSPICE1 only_toplevel=true
+C {devices/code_shown.sym} 90 -640 0 0 {name=NGSPICE1 only_toplevel=true
 value="
 .options method=trap rawfile=binary
 .options solver=klu nomod
@@ -71,23 +52,70 @@ save all
 tran 0.1n 1u
 
 write testbench_mux_tg.raw
+quit
 .endc
 "}
-C {devices/launcher.sym} -595 415 0 0 {name=h1
+C {devices/launcher.sym} 135 -255 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
 tclcommand="
 xschem raw_read $netlist_dir/testbench_mux_tg.raw tran"
 }
-C {vsource.sym} -380 -20 0 0 {name=V6 value="PULSE(0 3.3 0n 1n 1n 50n 100n)" savecurrent=false
+C {vsource.sym} 420 -800 0 0 {name=V6 value="PULSE(0 3.3 0n 1n 1n 50n 100n)" savecurrent=false
 }
-C {vsource.sym} -640 90 0 0 {name=V7 value="PULSE(0 3.3 0n 1n 1n 100n 200n)"  savecurrent=false}
-C {vsource.sym} -390 160 0 0 {name=V8 value="PULSE(0 3.3 0n 1n 1n 200n 400n)" savecurrent=false}
-C {opin.sym} 195 60 0 0 {name=p16 lab=y}
-C {lab_wire.sym} -200 20 0 0 {name=p17 sig_type=std_logic lab=A
+C {vsource.sym} 660 -800 0 0 {name=V7 value="PULSE(0 3.3 0n 1n 1n 100n 200n)"  savecurrent=false}
+C {vsource.sym} 900 -800 0 0 {name=V8 value="PULSE(0 3.3 0n 1n 1n 200n 400n)" savecurrent=false}
+C {lab_wire.sym} 420 -910 0 0 {name=p17 sig_type=std_logic lab=A
 }
-C {lab_wire.sym} -240 120 0 0 {name=p18 sig_type=std_logic lab=S}
-C {lab_wire.sym} -330 30 0 0 {name=p19 sig_type=std_logic lab=B}
-C {gnd.sym} -490 230 0 0 {name=l1 lab=GND}
-C {vsource.sym} 240 70 0 0 {name=V9 value=3.3 savecurrent=false}
-C {schematics/mux2x1_transmission_gate/mux_toplevel_ilmi.sym} -10 60 0 0 {name=x1}
+C {lab_wire.sym} 900 -910 0 0 {name=p18 sig_type=std_logic lab=S}
+C {lab_wire.sym} 660 -910 0 0 {name=p19 sig_type=std_logic lab=B}
+C {vsource.sym} 300 -800 0 0 {name=V1 value=3.3 savecurrent=false}
+C {vsource.sym} 160 -800 0 0 {name=V2 value=0 savecurrent=false}
+C {gnd.sym} 160 -770 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} 160 -830 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 300 -770 2 0 {name=p2 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 300 -930 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {res.sym} 300 -880 0 0 {name=R1
+value=5
+footprint=1206
+device=resistor
+m=1}
+C {lab_wire.sym} 420 -770 2 0 {name=p4 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 660 -770 2 0 {name=p5 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 900 -770 2 0 {name=p6 sig_type=std_logic lab=VSS}
+C {res.sym} 420 -880 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} 660 -880 0 0 {name=R3
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} 900 -880 0 0 {name=R4
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {parax_cap.sym} 500 -900 0 0 {name=C1 gnd=0 value=20p m=1}
+C {parax_cap.sym} 740 -900 0 0 {name=C2 gnd=0 value=20p m=1}
+C {parax_cap.sym} 980 -900 0 0 {name=C3 gnd=0 value=20p m=1}
+C {lab_wire.sym} 500 -910 0 0 {name=p7 sig_type=std_logic lab=A
+}
+C {lab_wire.sym} 740 -910 0 0 {name=p8 sig_type=std_logic lab=B}
+C {res.sym} 690 -1100 3 1 {name=R5
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {parax_cap.sym} 600 -1090 0 0 {name=C4 gnd=0 value=20p m=1}
+C {lab_wire.sym} 980 -910 0 0 {name=p9 sig_type=std_logic lab=S}
+C {lab_wire.sym} 300 -1140 0 0 {name=p10 lab=A}
+C {lab_wire.sym} 300 -1120 0 0 {name=p11 lab=B}
+C {lab_wire.sym} 600 -1140 0 1 {name=p12 lab=VDD}
+C {lab_wire.sym} 300 -1100 0 0 {name=p13 lab=S}
+C {lab_wire.sym} 600 -1120 0 1 {name=p14 lab=VSS}
+C {lab_wire.sym} 720 -1100 0 1 {name=p15 lab=OUT}
+C {title.sym} 180 -80 0 0 {name=l1 author="Ahmad Jabar Ilmi"}
+C {cells/sdffrq/sch/mux_2x1.sym} 450 -1120 0 0 {name=x1}
