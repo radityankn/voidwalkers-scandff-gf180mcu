@@ -46,9 +46,13 @@ library (gf180mcu_osu_sc_gp9t3v3_tt_sdffrq) {
     index_2 ("0.42, 0.6, 1.2");
   }
 
-  /* D_FLIP_FLOP_R */
-  cell (D_FLIP_FLOP_R) {
-    area : 90;
+  cell (SDFFRQ) {
+    area : 121;
+    ff(IQ,IQN) { 
+      clocked_on : "(CLK)" ; 
+      next_state : "((SE&SI)|(D&(!SE)))" ; 
+      clear : "(R)";
+    }
     pg_pin (VDD) {
       voltage_name : VDD;
       pg_type : primary_power;
@@ -69,6 +73,18 @@ library (gf180mcu_osu_sc_gp9t3v3_tt_sdffrq) {
       direction : input;
       capacitance : 0.009118;
       clock : true;
+    }
+    pin (D) {
+      direction : input;
+      capacitance : 0.009591;
+    }
+    pin (SI) {
+      direction : input;
+      capacitance : 0.002496;
+    }
+    pin (SE) {
+      direction : input;
+      capacitance : 0.004847;
     }
     pin (D) {
       direction : input;
@@ -157,148 +173,6 @@ library (gf180mcu_osu_sc_gp9t3v3_tt_sdffrq) {
     pin (R) {
       direction : input;
       capacitance : 0.000000;
-    }
-  }
-
-  /* MUX_2X1 */
-  cell (MUX_2X1) {
-    area : 30;
-    pg_pin (VDD) {
-      voltage_name : VDD;
-      pg_type : primary_power;
-    }
-    pg_pin (VSS) {
-      voltage_name : VSS;
-      pg_type : primary_ground;
-    }
-    pg_pin (VPW) {
-      voltage_name : VPW;
-      pg_type : pwell;
-    }
-    pg_pin (VNW) {
-      voltage_name : VNW;
-      pg_type : nwell;
-    }
-    pin (A) {
-      direction : input;
-      capacitance : 0.009591;
-    }
-    pin (B) {
-      direction : input;
-      capacitance : 0.002496;
-    }
-    pin (OUT) {
-      direction : output;
-      function : "(A&!S) | (B&S)";
-      timing () {
-        related_pin : "A";
-        cell_rise (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "1.966737, 2.760471, 5.406190", \
-            "1.980449, 2.774190, 5.419923", \
-            "1.995082, 2.788834, 5.434574");
-        }
-        rise_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.684967, 3.827711, 7.636865", \
-            "2.684969, 3.827714, 7.636866", \
-            "2.684964, 3.827709, 7.636863");
-        }
-        cell_fall (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "1.787499, 2.499945, 4.874722", \
-            "1.805040, 2.517492, 4.892276", \
-            "1.834034, 2.546488, 4.921279");
-        }
-        fall_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.233881, 3.185003, 6.355405", \
-            "2.233883, 3.185000, 6.355404", \
-            "2.233885, 3.185002, 6.355404");
-        }
-      }
-      timing () {
-        related_pin : "B";
-        cell_rise (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "1.969900, 2.763632, 5.409354", \
-            "1.982475, 2.776218, 5.421951", \
-            "1.996502, 2.790252, 5.435993");
-        }
-        rise_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.684969, 3.827714, 7.636866", \
-            "2.684966, 3.827713, 7.636865", \
-            "2.684967, 3.827711, 7.636864");
-        }
-        cell_fall (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "1.784416, 2.496862, 4.871639", \
-            "1.803306, 2.515757, 4.890541", \
-            "1.832974, 2.545428, 4.920216");
-        }
-        fall_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.233884, 3.185002, 6.355404", \
-            "2.233886, 3.185003, 6.355403", \
-            "2.233886, 3.185004, 6.355403");
-        }
-      }
-      timing () {
-        related_pin : "S";
-        cell_rise (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.010494, 2.804225, 5.449946", \
-            "2.029277, 2.823008, 5.468728", \
-            "2.049877, 2.843610, 5.489331");
-        }
-        rise_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.684969, 3.827714, 7.636866", \
-            "2.684969, 3.827713, 7.636866", \
-            "2.684969, 3.827714, 7.636866");
-        }
-        cell_fall (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "1.836568, 2.549014, 4.923792", \
-            "1.861435, 2.573880, 4.948658", \
-            "1.895584, 2.608031, 4.982808");
-        }
-        fall_transition (delay_template_3x3) {
-          index_1 ("0.08, 0.2, 0.4");
-          index_2 ("0.42, 0.6, 1.2");
-          values ( \
-            "2.233879, 3.185001, 6.355405", \
-            "2.233887, 3.185005, 6.355402", \
-            "2.233882, 3.184999, 6.355405");
-        }
-      }
-    }
-    pin (S) {
-      direction : input;
-      capacitance : 0.004847;
     }
   }
 }
