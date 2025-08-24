@@ -1,0 +1,11 @@
+X0 VDD a_n60_n80# out VDD pfet_03v3 ad=5.525n pd=0.235m as=9.35n ps=0.45m w=170 l=30
+X1 a_580_n190# selector VDD VDD pfet_03v3 ad=9.35n pd=0.45m as=11.05n ps=0.47m w=170 l=30
+X2 a_n60_n80# a_130_n80# VSS VSS nfet_03v3 ad=5.4825n pd=0.299m as=2.7625n ps=0.15m w=85 l=30
+X3 a_130_n80# selector input_1 VDD pfet_03v3 ad=5.525n pd=0.235m as=10.285n ps=0.461m w=170 l=30
+X4 input_2 selector a_130_n80# VSS nfet_03v3 ad=5.525n pd=0.3m as=2.7625n ps=0.15m w=85 l=30
+X5 a_580_n190# selector VSS VSS nfet_03v3 ad=4.675n pd=0.28m as=5.525n ps=0.3m w=85 l=30
+X6 VSS a_n60_n80# out VSS nfet_03v3 ad=2.7625n pd=0.15m as=4.675n ps=0.28m w=85 l=30
+X7 a_130_n80# a_580_n190# input_1 VSS nfet_03v3 ad=2.7625n pd=0.15m as=5.1425n ps=0.291m w=85 l=30
+X8 a_n60_n80# a_130_n80# VDD VDD pfet_03v3 ad=10.965n pd=0.469m as=5.525n ps=0.235m w=170 l=30
+X9 input_2 a_580_n190# a_130_n80# VDD pfet_03v3 ad=11.05n pd=0.47m as=5.525n ps=0.235m w=170 l=30
+
