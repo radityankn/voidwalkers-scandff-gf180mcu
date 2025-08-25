@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1756077170
+timestamp 1756129822
 << nwell >>
 rect -260 300 1510 1020
 << pwell >>
@@ -299,12 +299,21 @@ rect 1340 120 1450 140
 rect 1340 -10 1350 120
 rect 1400 -10 1450 120
 rect 1340 -30 1450 -10
-rect -260 -250 1510 -130
+rect -260 -150 1510 -130
+rect -260 -200 -200 -150
+rect -100 -200 1510 -150
+rect -260 -250 1510 -200
 << labels >>
-rlabel metal1 480 190 490 200 1 input_1
-rlabel metal1 860 190 870 200 1 input_2
-rlabel metal1 1200 200 1210 210 1 selector
-rlabel metal1 -140 250 -130 260 1 out
-rlabel metal1 -30 950 -20 960 1 VDD
-rlabel metal1 -30 -220 -20 -210 1 VSS
+flabel metal1 s -160 200 -90 400 0 FreeSans 400 0 0 0 OUT
+port 2 nsew
+flabel metal1 s 1180 210 1290 270 0 FreeSans 400 0 0 0 SELECTOR
+port 3 nsew
+flabel metal1 s -260 900 1510 1020 0 FreeSans 400 0 0 0 VDD
+port 6 nsew
+flabel metal1 s -260 -250 1510 -130 0 FreeSans 400 0 0 0 VSS
+port 8 nsew
+flabel metal1 s 450 190 530 240 0 FreeSans 400 0 0 0 INPUT_2
+port 9 nsew
+flabel metal1 s 830 190 910 240 0 FreeSans 400 0 0 0 INPUT_1
+port 10 nsew
 << end >>
