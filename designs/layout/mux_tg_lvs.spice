@@ -1,0 +1,15 @@
+* NGSPICE file created from /foss/designs/voidwalkers-scandff-gf180mcu/designs/layout/mux_tg.ext - technology: gf180mcuD
+
+.subckt mux_tg OUT SELECTOR VDD VSS INPUT_2 INPUT_1
+X0 VDD a_n60_n80# OUT VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.935p ps=4.5u w=1.7u l=0.3u
+X1 a_580_n190# SELECTOR VDD VDD pfet_03v3 ad=0.935p pd=4.5u as=1.105p ps=4.7u w=1.7u l=0.3u
+X2 a_n60_n80# a_130_n80# VSS VSS nfet_03v3 ad=0.54825p pd=2.99u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X3 a_130_n80# SELECTOR INPUT_2 VDD pfet_03v3 ad=0.5525p pd=2.35u as=1.0285p ps=4.61u w=1.7u l=0.3u
+X4 INPUT_1 SELECTOR a_130_n80# VSS nfet_03v3 ad=0.5525p pd=3u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X5 a_580_n190# SELECTOR VSS VSS nfet_03v3 ad=0.4675p pd=2.8u as=0.5525p ps=3u w=0.85u l=0.3u
+X6 VSS a_n60_n80# OUT VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.4675p ps=2.8u w=0.85u l=0.3u
+X7 a_130_n80# a_580_n190# INPUT_2 VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.51425p ps=2.91u w=0.85u l=0.3u
+X8 a_n60_n80# a_130_n80# VDD VDD pfet_03v3 ad=1.0965p pd=4.69u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X9 INPUT_1 a_580_n190# a_130_n80# VDD pfet_03v3 ad=1.105p pd=4.7u as=0.5525p ps=2.35u w=1.7u l=0.3u
+.ends
+
