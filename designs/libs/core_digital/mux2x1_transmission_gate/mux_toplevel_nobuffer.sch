@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-P 4 1 590 -160 {}
 N 20 -210 20 110 {lab=#net1}
 N 20 -210 100 -210 {lab=#net1}
 N 20 -40 100 -40 {lab=#net1}
@@ -44,20 +43,9 @@ N 400 -280 400 -230 {lab=vdd}
 N -360 100 -360 120 {lab=SELECTOR}
 N -60 90 -60 100 {lab=vdd}
 N -60 140 -60 150 {lab=vss}
-N 880 -140 920 -140 {lab=#net3}
-N 920 -160 920 -140 {lab=#net3}
-N 920 -160 940 -160 {lab=#net3}
-N 1240 -140 1260 -140 {lab=out}
-N 440 -280 880 -280 {lab=vdd}
-N 880 -280 880 -160 {lab=vdd}
-N 880 -280 1240 -280 {lab=vdd}
-N 1240 -280 1240 -160 {lab=vdd}
-N 430 -40 880 -40 {lab=vss}
-N 880 -120 880 -40 {lab=vss}
-N 1240 -120 1240 -40 {lab=vss}
-N 880 -40 1240 -40 {lab=vss}
+N 580 -160 600 -160 {lab=out}
 C {iopin.sym} 440 -310 0 0 {name=p1 lab=vdd}
-C {opin.sym} 1260 -140 0 0 {name=p5 lab=out}
+C {opin.sym} 600 -160 0 0 {name=p5 lab=out}
 C {ipin.sym} -410 -230 0 0 {name=p6 lab=INPUT_1}
 C {ipin.sym} -410 -80 0 0 {name=p7 lab=INPUT_2}
 C {ipin.sym} -410 120 0 0 {name=p8 lab=SELECTOR}
@@ -67,7 +55,5 @@ C {iopin.sym} -40 210 0 0 {name=p9 lab=vss}
 C {iopin.sym} -40 40 0 0 {name=p10 lab=vdd}
 C {iopin.sym} 430 -170 0 0 {name=p11 lab=vss}
 C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_tg.sym} 250 -210 0 0 {name=x2}
-C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_inverter.sym} 730 -140 0 0 {name=x4}
 C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_tg.sym} 250 -60 0 0 {name=x3}
-C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_inverter.sym} 1090 -140 0 0 {name=x5}
 C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_inverter.sym} -210 120 0 0 {name=x1}

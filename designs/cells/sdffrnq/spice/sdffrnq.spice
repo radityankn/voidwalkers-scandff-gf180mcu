@@ -1,0 +1,50 @@
+* NGSPICE file created from sdffrnq.ext - technology: gf180mcuD
+
+.subckt mux_as_component a_640_n30# a_1120_n30# a_459_n30# a_1120_460# w_330_300#
++ a_830_n30# a_580_300# VSUBS
+X0 a_580_n190# a_580_300# a_1120_460# w_330_300# pfet_03v3 ad=0.935p pd=4.5u as=1.105p ps=4.7u w=1.7u l=0.3u
+X1 a_640_n30# a_580_300# a_459_n30# w_330_300# pfet_03v3 ad=0.5525p pd=2.35u as=1.0285p ps=4.61u w=1.7u l=0.3u
+X2 a_830_n30# a_580_300# a_640_n30# VSUBS nfet_03v3 ad=0.5525p pd=3u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X3 a_580_n190# a_580_300# a_1120_n30# VSUBS nfet_03v3 ad=0.4675p pd=2.8u as=0.5525p ps=3u w=0.85u l=0.3u
+X4 a_640_n30# a_580_n190# a_459_n30# VSUBS nfet_03v3 ad=0.27625p pd=1.5u as=0.51425p ps=2.91u w=0.85u l=0.3u
+X5 a_830_n30# a_580_n190# a_640_n30# w_330_300# pfet_03v3 ad=1.105p pd=4.7u as=0.5525p ps=2.35u w=1.7u l=0.3u
+.ends
+
+.subckt sdffrnq VDD VSS A B S CLK RN Q
+Xmux_as_component_0 a_2090_270# VSS A VDD VDD B S VSS mux_as_component
+X0 a_n870_270# RN VDD VDD pfet_03v3 ad=1.275p pd=4.9u as=0.935p ps=4.5u w=1.7u l=0.3u
+X1 a_n1490_270# a_n1300_270# VSS VSS nfet_03v3 ad=0.54825p pd=2.99u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X2 a_n1300_270# a_n870_270# VSS VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.4675p ps=2.8u w=0.85u l=0.3u
+X3 a_120_270# a_n870_270# VSS VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.4675p ps=2.8u w=0.85u l=0.3u
+X4 a_1370_270# CLK a_1620_320# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.19125p ps=1.3u w=0.85u l=0.3u
+X5 a_n730_520# CLK a_n430_810# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.3825p ps=2.15u w=1.7u l=0.3u
+X6 a_n340_270# CLK VSS VSS nfet_03v3 ad=0.765p pd=3.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X7 VDD a_n730_520# a_n780_810# VDD pfet_03v3 ad=0.765p pd=2.6u as=0.2125p ps=1.95u w=1.7u l=0.3u
+X8 a_1620_810# a_120_270# VDD VDD pfet_03v3 ad=0.3825p pd=2.15u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X9 VDD a_120_270# a_n90_810# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.8925p ps=2.75u w=1.7u l=0.3u
+X10 a_1710_650# CLK VDD VDD pfet_03v3 ad=1.53p pd=5.2u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X11 a_1270_810# a_n870_270# a_120_270# VDD pfet_03v3 ad=0.425p pd=2.2u as=0.935p ps=4.5u w=1.7u l=0.3u
+X12 a_n730_520# a_n340_270# a_n430_320# VSS nfet_03v3 ad=0.61625p pd=2.3u as=0.19125p ps=1.3u w=0.85u l=0.3u
+X13 a_1620_320# a_120_270# VSS VSS nfet_03v3 ad=0.19125p pd=1.3u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X14 VSS a_n730_520# a_n1300_270# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X15 a_70_320# CLK a_n730_520# VSS nfet_03v3 ad=0.10625p pd=1.1u as=0.61625p ps=2.3u w=0.85u l=0.3u
+X16 VDD a_n1490_270# Q VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.935p ps=4.5u w=1.7u l=0.3u
+X17 a_n90_810# a_n340_270# a_n730_520# VDD pfet_03v3 ad=0.8925p pd=2.75u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X18 VSS a_120_270# a_70_320# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.10625p ps=1.1u w=0.85u l=0.3u
+X19 a_n430_810# a_n1300_270# VDD VDD pfet_03v3 ad=0.3825p pd=2.15u as=0.765p ps=2.6u w=1.7u l=0.3u
+X20 VDD a_1370_270# a_1270_810# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.425p ps=2.2u w=1.7u l=0.3u
+X21 a_1960_810# CLK a_1370_270# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X22 a_1710_650# CLK VSS VSS nfet_03v3 ad=0.765p pd=3.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X23 a_n780_810# a_n870_270# a_n1300_270# VDD pfet_03v3 ad=0.2125p pd=1.95u as=0.935p ps=4.5u w=1.7u l=0.3u
+X24 VDD a_2090_270# a_1960_810# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X25 VSS a_n1490_270# Q VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.4675p ps=2.8u w=0.85u l=0.3u
+X26 VSS a_1370_270# a_120_270# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X27 a_1960_320# a_1710_650# a_1370_270# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X28 a_n430_320# a_n1300_270# VSS VSS nfet_03v3 ad=0.19125p pd=1.3u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X29 a_n1490_270# a_n1300_270# VDD VDD pfet_03v3 ad=1.0965p pd=4.69u as=0.5525p ps=2.35u w=1.7u l=0.3u
+X30 a_1370_270# a_1710_650# a_1620_810# VDD pfet_03v3 ad=0.5525p pd=2.35u as=0.3825p ps=2.15u w=1.7u l=0.3u
+X31 VSS a_2090_270# a_1960_320# VSS nfet_03v3 ad=0.27625p pd=1.5u as=0.27625p ps=1.5u w=0.85u l=0.3u
+X32 a_n870_270# RN VSS VSS nfet_03v3 ad=0.6375p pd=3.2u as=0.4675p ps=2.8u w=0.85u l=0.3u
+X33 a_n340_270# CLK VDD VDD pfet_03v3 ad=1.53p pd=5.2u as=0.5525p ps=2.35u w=1.7u l=0.3u
+.ends
+
