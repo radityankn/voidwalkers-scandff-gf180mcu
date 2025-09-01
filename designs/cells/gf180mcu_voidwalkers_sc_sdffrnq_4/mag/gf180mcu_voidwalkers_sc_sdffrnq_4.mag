@@ -706,7 +706,7 @@ rect -690 152 -220 198
 rect -80 152 2420 198
 rect 2560 152 3840 198
 rect -1690 100 3840 152
-use mux_as_component  mux_as_component_0 ../mux2_1
+use mux_as_component  mux_as_component_0
 timestamp 1756740009
 transform 1 0 2330 0 1 350
 box 330 -250 1510 1020
