@@ -12,7 +12,8 @@ Proposal : [Team VoidWalkers SDFF Proposal](https://docs.google.com/presentation
 
 Schematic Review : [Team VoidWalkers SDFF Schematic Review](https://docs.google.com/presentation/d/1h36nSLaYSaX5CXgG3Rma9wVmSlDOISLQ6w9QRmRZ6Y4/edit?slide=id.g37264e39492_100_47#slide=id.g37264e39492_100_47)
 
-Layout Review : {Team Voidwalkers Layout Review](https://docs.google.com/presentation/d/138sG9_6nFNde91uJd1VJHh-8p3Jak7Ld7Pb-RK_AmKo/edit?slide=id.g3885608af53_3_3#slide=id.g3885608af53_3_3)
+Layout Review : [Team Voidwalkers Layout Review](https://docs.google.com/presentation/d/138sG9_6nFNde91uJd1VJHh-8p3Jak7Ld7Pb-RK_AmKo/edit?slide=id.g3885608af53_3_3#slide=id.g3885608af53_3_3)
+
 Project Tracker: [TeamVoidWalkers Project Tracker](https://docs.google.com/spreadsheets/d/1j5DVouaqu3p_pqJHRvqstsoFSM28it2NvSHbgs7ZdGA/edit?usp=sharing)
 ### Background 
 
