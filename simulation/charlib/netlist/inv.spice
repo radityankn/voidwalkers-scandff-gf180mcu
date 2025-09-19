@@ -1,6 +1,0 @@
-** sch_path: /foss/designs/voidwalkers-scandff-gf180mcu/designs/schematics/mux2x1/inv.sch
-.subckt inv VDD IN OUT VSS
-*.PININFO IN:I OUT:O VDD:B VSS:B
-M2 OUT IN VDD VDD pfet_03v3 L=0.3u W=1.7u nf=1 m=1
-M1 OUT IN VSS VSS nfet_03v3 L=0.3u W=0.85u nf=1 m=1
-.ends

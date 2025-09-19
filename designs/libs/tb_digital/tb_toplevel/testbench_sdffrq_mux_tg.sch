@@ -150,3 +150,7 @@ m=1
 value=60f
 footprint=1206
 device="ceramic capacitor"}
+C {io_bi_t.sym} 0 -530 0 0 {name=IO1
+model=gf180mcu_fd_io__bi_t
+spiceprefix=X
+}
