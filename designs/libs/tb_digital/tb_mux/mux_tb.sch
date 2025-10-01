@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.7459451e-07
-x2=1.7705204e-07
+x1=1.7422587e-07
+x2=1.766834e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.7459451e-07
-x2=1.7705204e-07
+x1=1.7422587e-07
+x2=1.766834e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,28 +50,20 @@ logy=0
 hilight_wave=0
 autoload=0
 sim_type=tran}
-N 110 -130 120 -130 {lab=vdd}
+N -40 -180 -30 -180 {lab=vdd}
 N -230 -60 -180 -60 {lab=data}
 N -230 -40 -180 -40 {lab=scan_data}
-N -230 -20 -180 -20 {lab=scan_enable}
 N -460 100 -450 100 {lab=#net1}
 N -450 100 -450 150 {lab=#net1}
 N -390 80 -390 150 {lab=#net2}
 N -230 80 -230 150 {lab=#net3}
 N -450 210 -450 240 {lab=GND}
-N 120 120 120 210 {lab=GND}
 N -450 210 120 210 {lab=GND}
-N 120 -130 120 -60 {lab=vdd}
-N 120 60 120 120 {lab=GND}
-N 120 -60 140 -60 {lab=vdd}
-N 120 20 160 20 {lab=GND}
-N 120 20 160 20 {lab=GND}
-N 160 20 160 60 {lab=GND}
-N 120 60 160 60 {lab=GND}
-N 120 40 160 40 {lab=GND}
-N 120 -40 140 -40 {lab=vdd}
-N 120 -20 140 -20 {lab=vdd}
-N 140 -60 140 -20 {lab=vdd}
+N -30 -180 -30 -110 {lab=vdd}
+N -30 -110 -10 -110 {lab=vdd}
+N -30 -90 -10 -90 {lab=vdd}
+N -30 -70 -10 -70 {lab=vdd}
+N -10 -110 -10 -70 {lab=vdd}
 N -540 210 -450 210 {lab=GND}
 N -390 40 -390 80 {lab=#net2}
 N -430 40 -390 40 {lab=#net2}
@@ -83,12 +75,24 @@ N 210 0 270 0 {lab=out}
 N 120 0 130 0 {lab=out}
 N 190 0 210 -0 {lab=out}
 N 130 0 190 -0 {lab=out}
-C {lab_pin.sym} 110 -130 0 0 {name=p1 sig_type=std_logic lab=vdd
+N -120 -220 -120 -170 {lab=scan_enable}
+N -30 -30 -10 -30 {lab=GND}
+N -10 -30 -10 -10 {lab=GND}
+N -30 -10 -10 -10 {lab=GND}
+N -30 -10 -10 -10 {lab=GND}
+N -10 -10 -10 10 {lab=GND}
+N -30 10 -10 10 {lab=GND}
+N -10 10 30 10 {lab=GND}
+N 30 10 30 210 {lab=GND}
+N 60 -0 120 -0 {lab=out}
+N 60 -50 60 -0 {lab=out}
+N -30 -50 60 -50 {lab=out}
+C {lab_pin.sym} -40 -180 0 0 {name=p1 sig_type=std_logic lab=vdd
 }
 C {lab_pin.sym} 270 0 0 1 {name=p3 sig_type=std_logic lab=out}
 C {lab_pin.sym} -230 -60 0 0 {name=p4 sig_type=std_logic lab=data}
 C {lab_pin.sym} -230 -40 0 0 {name=p5 sig_type=std_logic lab=scan_data}
-C {lab_pin.sym} -230 -20 0 0 {name=p6 sig_type=std_logic lab=scan_enable}
+C {lab_pin.sym} -120 -220 0 0 {name=p6 sig_type=std_logic lab=scan_enable}
 C {vsource.sym} -450 180 0 0 {name=V1 value=3.3 savecurrent=false}
 C {vsource.sym} -390 180 0 0 {name=V2 value=0 savecurrent=false}
 C {vsource.sym} -230 180 0 0 {name=V3 value="PULSE(0 3.3 0 0ns 0ns 5ns 10ns 10000)" savecurrent=false}
@@ -103,7 +107,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
 C {code_shown.sym} 340 -70 0 0 {name=s1 only_toplevel=false value="
-.include /foss/designs/voidwalkers-scandff-gf180mcu/simulation/charlib/netlist/mux_toplevel_postlayout.spice
+**.include /foss/designs/voidwalkers-scandff-gf180mcu/simulation/charlib/netlist/mux_toplevel_postlayout.spice
 .control
 save all
 tran 0.1n 1u
@@ -118,7 +122,6 @@ tclcommand="xschem raw_read $netlist_dir/mux_tb.raw tran"
 }
 C {vsource.sym} -540 180 0 0 {name=V4 value=3.3 savecurrent=false}
 C {lab_pin.sym} -600 150 0 0 {name=p2 sig_type=std_logic lab=vdd}
-C {voidwalkers-scandff-gf180mcu/simulation/charlib/netlist/mux_toplevel_postlayout.sym} 210 190 0 0 {}
 C {res.sym} -460 40 1 0 {name=R1
 value=50
 footprint=1206
@@ -144,3 +147,4 @@ m=1
 value=20f
 footprint=1206
 device="ceramic capacitor"}
+C {voidwalkers-scandff-gf180mcu/designs/libs/core_digital/mux2x1_transmission_gate/mux_toplevel_nobuffer.sym} -30 20 0 0 {name=x1}
