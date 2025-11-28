@@ -83,3 +83,5 @@ We are hoping that our work will be useful for everyone, as well as accepted to 
 ***
 
 This repository used the template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
+
+Post Mortem Presentation : [here](https://docs.google.com/presentation/d/138sG9_6nFNde91uJd1VJHh-8p3Jak7Ld7Pb-RK_AmKo/edit?usp=sharing)
